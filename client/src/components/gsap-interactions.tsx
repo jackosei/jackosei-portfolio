@@ -127,10 +127,9 @@ export default function GSAPInteractions() {
           left: "-12px",
           top: "-12px",
           borderRadius: "50%",
-          backgroundColor: "rgba(34, 197, 94, 0.1)",
-          border: "1px solid rgba(34, 197, 94, 0.3)",
-          transform: "translate(-50%, -50%)",
-          backdropFilter: "blur(2px)"
+          backgroundColor: "rgba(34, 197, 94, 0.15)",
+          border: "1px solid rgba(34, 197, 94, 0.4)",
+          transform: "translate(-50%, -50%)"
         }}
       />
       <div
