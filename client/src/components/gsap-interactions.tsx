@@ -119,25 +119,28 @@ export default function GSAPInteractions() {
 
   return (
     <>
-      {/* Custom Cursor */}
+      {/* Custom Cursor - Modern minimal style */}
       <div
         ref={cursorRef}
-        className="fixed w-8 h-8 pointer-events-none z-[9999] mix-blend-difference"
+        className="fixed w-6 h-6 pointer-events-none z-[9999]"
         style={{
-          left: "-16px",
-          top: "-16px",
+          left: "-12px",
+          top: "-12px",
           borderRadius: "50%",
-          border: "1px solid white",
-          transform: "translate(-50%, -50%)"
+          backgroundColor: "rgba(34, 197, 94, 0.1)",
+          border: "1px solid rgba(34, 197, 94, 0.3)",
+          transform: "translate(-50%, -50%)",
+          backdropFilter: "blur(2px)"
         }}
       />
       <div
         ref={cursorDotRef}
-        className="fixed w-1 h-1 bg-white pointer-events-none z-[9999] mix-blend-difference"
+        className="fixed w-1.5 h-1.5 pointer-events-none z-[9999]"
         style={{
-          left: "-2px",
-          top: "-2px",
+          left: "-3px",
+          top: "-3px",
           borderRadius: "50%",
+          backgroundColor: "rgb(34, 197, 94)",
           transform: "translate(-50%, -50%)"
         }}
       />
