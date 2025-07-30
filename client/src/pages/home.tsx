@@ -1,0 +1,29 @@
+import Navigation from "@/components/navigation";
+import HeroSection from "@/components/hero-section";
+import ClientCarousel from "@/components/client-carousel";
+import ServicesSection from "@/components/services-section";
+import SelectedWork from "@/components/selected-work";
+import ProcessSection from "@/components/process-section";
+import GallerySection from "@/components/gallery-section";
+import Testimonials from "@/components/testimonials";
+import AboutSection from "@/components/about-section";
+import ContactCTA from "@/components/contact-cta";
+import Footer from "@/components/footer";
+
+export default function Home() {
+  return (
+    <div className="bg-dark text-white">
+      <Navigation />
+      <HeroSection />
+      <ClientCarousel />
+      <ServicesSection />
+      <SelectedWork />
+      <ProcessSection />
+      <GallerySection />
+      <Testimonials />
+      <AboutSection />
+      <ContactCTA />
+      <Footer />
+    </div>
+  );
+}
