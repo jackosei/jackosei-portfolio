@@ -24,13 +24,13 @@ export default function GSAPInteractions() {
     };
 
     const onMouseEnterInteractive = () => {
-      gsap.to(cursor, { scale: 4, duration: 0.3 });
-      gsap.to(cursorDot, { scale: 0, duration: 0.3 });
+      gsap.to(cursor, { scale: 1.5, duration: 0.2, ease: "power2.out" });
+      gsap.to(cursorDot, { scale: 0.5, duration: 0.2, ease: "power2.out" });
     };
 
     const onMouseLeaveInteractive = () => {
-      gsap.to(cursor, { scale: 1, duration: 0.3 });
-      gsap.to(cursorDot, { scale: 1, duration: 0.3 });
+      gsap.to(cursor, { scale: 1, duration: 0.2, ease: "power2.out" });
+      gsap.to(cursorDot, { scale: 1, duration: 0.2, ease: "power2.out" });
     };
 
     // Animate cursor following mouse
