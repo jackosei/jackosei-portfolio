@@ -19,7 +19,7 @@ export default function ClientCarousel() {
             <img
               src={logo}
               alt="Client logo"
-              className="h-8 opacity-50 hover:opacity-100 transition-opacity"
+              className="h-8 opacity-50 hover:opacity-100 transition-opacity client-logo"
             />
           </div>
         ))}
@@ -29,7 +29,7 @@ export default function ClientCarousel() {
             <img
               src={logo}
               alt="Client logo"
-              className="h-8 opacity-50 hover:opacity-100 transition-opacity"
+              className="h-8 opacity-50 hover:opacity-100 transition-opacity client-logo"
             />
           </div>
         ))}

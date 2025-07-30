@@ -23,7 +23,7 @@ export default function ServicesSection() {
     <section id="services" className="py-24">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-16 gsap-fade-up"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -42,11 +42,12 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-card-bg p-8 rounded-2xl hover:transform hover:scale-105 transition-all duration-300"
+              className="bg-card-bg p-8 rounded-2xl hover:transform hover:scale-105 transition-all duration-300 gsap-fade-up"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
+              data-cursor="pointer"
             >
               <div className="text-sm text-light-gray mb-4">{service.number}</div>
               <h3 className="text-2xl font-bold mb-4">{service.title}</h3>

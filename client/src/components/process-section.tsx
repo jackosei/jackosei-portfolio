@@ -48,6 +48,7 @@ export default function ProcessSection() {
           {/* Left Column - Sticky Header */}
           <div className="lg:sticky lg:top-24 lg:h-fit">
             <motion.div
+              className="gsap-fade-up"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -63,6 +64,7 @@ export default function ProcessSection() {
               <button
                 onClick={scrollToContact}
                 className="inline-flex items-center px-8 py-3 bg-green-accent text-white rounded-full hover:bg-green-accent-hover transition-colors"
+                data-cursor="pointer"
               >
                 Get in Touch
               </button>

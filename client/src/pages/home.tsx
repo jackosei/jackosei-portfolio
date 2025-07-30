@@ -9,10 +9,12 @@ import Testimonials from "@/components/testimonials";
 import AboutSection from "@/components/about-section";
 import ContactCTA from "@/components/contact-cta";
 import Footer from "@/components/footer";
+import GSAPInteractions from "@/components/gsap-interactions";
 
 export default function Home() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'hsl(0, 0%, 10.2%)', color: 'hsl(0, 0%, 98%)' }}>
+    <div className="min-h-screen" style={{ backgroundColor: 'hsl(0, 0%, 10.2%)', color: 'hsl(0, 0%, 98%)', cursor: 'none' }}>
+      <GSAPInteractions />
       <Navigation />
       <HeroSection />
       <ClientCarousel />
