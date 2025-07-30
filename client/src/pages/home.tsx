@@ -12,7 +12,7 @@ import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="bg-dark text-white">
+    <div className="min-h-screen" style={{ backgroundColor: 'hsl(0, 0%, 10.2%)', color: 'hsl(0, 0%, 98%)' }}>
       <Navigation />
       <HeroSection />
       <ClientCarousel />
