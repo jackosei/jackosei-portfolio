@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import ThemeSwitcher from "./theme-switcher";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -72,7 +73,7 @@ export default function Navigation() {
             LET'S TALK
           </button>
         </div>
-        <div className="text-sm" style={{ color: 'hsl(0, 0%, 40%)' }}>(0)</div>
+        <ThemeSwitcher />
       </nav>
     </motion.header>
   );

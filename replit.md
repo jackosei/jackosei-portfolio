@@ -7,6 +7,8 @@ This project is a modern, responsive portfolio website for a web designer named 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Theme preference: Dark theme with theme switcher functionality
+Process section layout: 2-column sticky layout (left sticky, right scrollable)
 
 ## System Architecture
 
@@ -36,11 +38,12 @@ Preferred communication style: Simple, everyday language.
 ## Key Components
 
 ### Frontend Components
-- **Navigation**: Fixed header with smooth scroll navigation
+- **Navigation**: Fixed header with smooth scroll navigation and theme switcher
 - **Hero Section**: Large banner with professional portrait and CTA
 - **Services Section**: Three-column layout showcasing core services
 - **Portfolio Gallery**: Grid layout displaying selected work
 - **Client Carousel**: Infinite scrolling client logos
+- **Process Section**: 2-column sticky layout with timeline design
 - **Testimonials**: Client feedback with photos and company details
 - **Contact CTA**: Call-to-action section for lead generation
 
