@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { heroImage, heroImageAlt } from "@/lib/constants";
 
 export default function HeroSection() {
   const scrollToSection = (sectionId: string) => {
@@ -45,8 +46,8 @@ export default function HeroSection() {
           </h1>
           
           <p className="text-lg mb-8 max-w-lg text-muted-foreground leading-relaxed">
-            Professional web designer and developer passionate about creating 
-            exceptional digital experiences that drive business growth and user engagement.
+            Professional, premium websites engineered from the ground up for user experience and conversion, 
+            turning visitors into customers. Passionate about creating exceptional digital experiences that drive business growth.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
@@ -100,8 +101,8 @@ export default function HeroSection() {
           <div className="relative">
             <div className="relative w-full h-[600px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=1000"
-                alt="Jack Osei - Professional web designer and developer"
+                src={heroImage}
+                alt={heroImageAlt}
                 fill
                 className="object-cover"
                 priority

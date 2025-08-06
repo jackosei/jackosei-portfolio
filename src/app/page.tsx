@@ -8,6 +8,7 @@ import ProcessSection from '@/components/process-section'
 import GallerySection from '@/components/gallery-section'
 import Testimonials from '@/components/testimonials'
 import AboutSection from '@/components/about-section'
+import StartupPainPoints from '@/components/startup-pain-points'
 import ContactCTA from '@/components/contact-cta'
 import Footer from '@/components/footer'
 import GSAPInteractions from '@/components/gsap-interactions'
@@ -34,6 +35,7 @@ export default function Home() {
       <GallerySection />
       <Testimonials />
       <AboutSection />
+      <StartupPainPoints />
       <ContactCTA />
       <Footer />
     </div>
