@@ -12,9 +12,11 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const { theme } = useTheme();
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
+    setTheme("dark");
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
       
@@ -82,16 +84,15 @@ export default function Navigation() {
             transition={{ delay: 0.2 }}
             className="flex items-center gap-2"
           >
-                         <div className="w-6 h-6 sm:w-8 sm:h-8 relative">
+                         <div className="w-10 h-10 sm:w-12 sm:h-12 relative">
                <Image
                  src={theme === "dark" ? "/images/JKO Light.svg" : "/images/JKO Dark.svg"}
                  alt="Jack Osei Logo"
                  fill
                  className="object-contain"
-                 sizes="(max-width: 640px) 24px, 32px"
+                 sizes="(max-width: 640px) 32px, 48px"
                />
              </div>
-            <span className="text-lg sm:text-xl font-bold text-foreground">Jack Osei</span>
           </motion.div>
 
           {/* Desktop Navigation */}

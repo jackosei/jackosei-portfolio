@@ -117,7 +117,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              <p className="font-bold text-lg text-foreground">Jack Osei</p>
+              <p className="font-bold text-lg text-foreground">Jack K. Osei</p>
               <p className="text-sm text-muted-foreground">The Founder&apos;s Tech Friend</p>
             </motion.div>
           </div>
