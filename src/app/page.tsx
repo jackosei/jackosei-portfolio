@@ -10,6 +10,7 @@ import StartupPainPoints from '@/components/startup-pain-points'
 import ContactCTA from '@/components/contact-cta'
 import Footer from '@/components/footer'
 import GSAPInteractions from '@/components/gsap-interactions'
+import ClientCarousel from '@/components/client-carousel'
 
 export const metadata: Metadata = {
   title: 'Jack Osei - Web Designer & Developer',
@@ -33,6 +34,7 @@ export default function Home() {
       <Testimonials />
       <AboutSection />
       <ContactCTA />
+      <ClientCarousel />
       <Footer />
     </div>
   )
