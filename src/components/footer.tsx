@@ -29,7 +29,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4 sm:mb-6">
               <div className="w-8 h-8 sm:w-10 sm:h-10 relative">
                 {mounted && (
-                  <Image
+                  <a href="/" className="cursor-pointer" aria-label="Home"> <Image
                     src={
                       theme === "dark"
                         ? "/images/JKO Light.svg"
@@ -39,7 +39,7 @@ export default function Footer() {
                     fill
                     className="object-contain"
                     sizes="(max-width: 640px) 32px, 40px"
-                  />
+                  /></a>
                 )}
               </div>
             </div>
@@ -105,16 +105,16 @@ export default function Footer() {
                 <a href="/seo-optimization">SEO Optimization</a>
               </li>
               <li className="hover:text-foreground transition-colors cursor-pointer">
-                Performance Optimization
+                <a href="/performance-optimization">Performance Optimization</a>
               </li>
               <li className="hover:text-foreground transition-colors cursor-pointer">
-                User Experience Design
+                <a href="/ui-ux-design">UI/UX Design</a>
               </li>
               <li className="hover:text-foreground transition-colors cursor-pointer">
-                Analytics & Insights
+                <a href="/analytics-insights">Analytics & Insights</a>
               </li>
               <li className="hover:text-foreground transition-colors cursor-pointer">
-                API Integration
+                <a href="/api-integration">API Integration</a>
               </li>
             </ul>
           </motion.div>
