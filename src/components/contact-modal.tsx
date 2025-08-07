@@ -95,7 +95,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                           <Target className="w-5 h-5 text-accent-highlight" />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-foreground">What You'll Get</h3>
+                          <h3 className="font-semibold text-foreground">What You&apos;ll Get</h3>
                           <p className="text-sm text-muted-foreground">15-minute call, no pressure</p>
                         </div>
                       </div>
@@ -244,17 +244,17 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       <CheckCircle className="w-8 h-8 text-green-600" />
                     </div>
                     <h3 className="text-2xl font-bold text-foreground mb-4">
-                      You're all set! 🎉
+                      You&apos;re all set! 🎉
                     </h3>
                     <p className="text-muted-foreground mb-6">
-                      I've received your request and will be in touch within 24 hours to schedule your free strategy call.
+                      I&apos;ve received your request and will be in touch within 24 hours to schedule your free strategy call.
                     </p>
                     <div className="bg-accent-highlight/5 rounded-xl p-4">
                       <h4 className="font-semibold text-foreground mb-2">What happens next:</h4>
                       <ul className="text-sm text-muted-foreground space-y-1">
-                        <li>• I'll review your website and prepare 3 specific insights</li>
-                        <li>• We'll schedule a 15-minute call at your convenience</li>
-                        <li>• You'll get immediate actionable advice to improve conversions</li>
+                        <li>• I&apos;ll review your website and prepare 3 specific insights</li>
+                        <li>• We&apos;ll schedule a 15-minute call at your convenience</li>
+                        <li>• You&apos;ll get immediate actionable advice to improve conversions</li>
                       </ul>
                     </div>
                   </motion.div>
