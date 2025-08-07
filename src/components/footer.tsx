@@ -90,8 +90,13 @@ export default function Footer() {
               Services
             </h4>
             <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-muted-foreground">
-              <li className="hover:text-foreground transition-colors cursor-pointer">
-                Web Design & Development
+              <li>
+                <a 
+                  href="/web-design-development" 
+                  className="hover:text-foreground transition-colors cursor-pointer"
+                >
+                  Web Design & Development
+                </a>
               </li>
               <li className="hover:text-foreground transition-colors cursor-pointer">
                 E-Commerce Development
