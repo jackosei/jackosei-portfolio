@@ -216,7 +216,7 @@ export default function SeoOptimizationPage() {
                 The Problem
               </h2>
               <p className="text-lg text-muted-foreground max-w-6xl mx-auto">
-                For sustainable, long-term growth, you need to show up when your ideal customers are actively searching for a solution. If you're not on the first page of Google, you're invisible. Most startups rely too heavily on paid advertising, creating a dependency that disappears when budgets are cut.
+                For sustainable, long-term growth, you need to show up when your ideal customers are actively searching for a solution. If you&apos;re not on the first page of Google, you&apos;re invisible. Most startups rely too heavily on paid advertising, creating a dependency that disappears when budgets are cut.
               </p>
               <div className="w-24 h-1 bg-accent-highlight mx-auto rounded-full mt-6" />
             </div>

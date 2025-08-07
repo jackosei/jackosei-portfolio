@@ -221,7 +221,7 @@ export default function PerformanceOptimizationPage() {
                 The Problem
               </h2>
               <p className="text-lg text-muted-foreground max-w-6xl mx-auto">
-                In the startup world, speed is everything. A slow, clunky website doesn't just frustrate users—it actively costs you customers, damages your brand reputation, and hurts your search engine rankings. Your visitors won't wait, and Google won't rank you well if your site is slow.
+                In the startup world, speed is everything. A slow, clunky website doesn&apos;t just frustrate users—it actively costs you customers, damages your brand reputation, and hurts your search engine rankings. Your visitors won&apos;t wait, and Google won&apos;t rank you well if your site is slow.
               </p>
               <div className="w-24 h-1 bg-accent-highlight mx-auto rounded-full mt-6" />
             </div>
@@ -263,7 +263,7 @@ export default function PerformanceOptimizationPage() {
                 The Solution
               </h2>
               <p className="text-lg text-muted-foreground max-w-6xl mx-auto">
-                I specialize in performance optimization, turning slow, frustrating websites into lightning-fast digital experiences. By focusing on Core Web Vitals and modern best practices, I'll make your site faster for your users and more attractive to Google.
+                I specialize in performance optimization, turning slow, frustrating websites into lightning-fast digital experiences. By focusing on Core Web Vitals and modern best practices, I&apos;ll make your site faster for your users and more attractive to Google.
               </p>
               <div className="w-24 h-1 bg-accent-highlight mx-auto rounded-full mt-6" />
             </div>

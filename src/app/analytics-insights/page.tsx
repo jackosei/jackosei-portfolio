@@ -228,7 +228,7 @@ export default function AnalyticsInsightsPage() {
               </h1>
 
               <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Your startup is generating data every single second. Every website visit, every click, and every sign-up is a clue. But if you're not collecting, interpreting, and acting on that data, you're flying blind.
+                                 Your startup is generating data every single second. Every website visit, every click, and every sign-up is a clue. But if you&apos;re not collecting, interpreting, and acting on that data, you&apos;re flying blind.
               </p>
             </div>
           </div>
@@ -243,7 +243,7 @@ export default function AnalyticsInsightsPage() {
                 The Problem
               </h2>
               <p className="text-lg text-muted-foreground max-w-6xl mx-auto">
-                You're likely burning cash on marketing that doesn't work, prioritizing features nobody wants, and missing huge opportunities for growth right under your nose. Without proper analytics, you're making decisions in the dark.
+                                 You&apos;re likely burning cash on marketing that doesn&apos;t work, prioritizing features nobody wants, and missing huge opportunities for growth right under your nose. Without proper analytics, you&apos;re making decisions in the dark.
               </p>
               <div className="w-24 h-1 bg-accent-highlight mx-auto rounded-full mt-6" />
             </div>
@@ -285,7 +285,7 @@ export default function AnalyticsInsightsPage() {
                 The Solution
               </h2>
               <p className="text-lg text-muted-foreground max-w-6xl mx-auto">
-                I help founders move from "I think" to "I know." I'll help you set up an analytics framework that turns raw data into your most valuable asset: actionable insights. We'll track the metrics that actually matter for growth and build a clear picture of what's working and what's not.
+                                 I help founders move from &quot;I think&quot; to &quot;I know.&quot; I&apos;ll help you set up an analytics framework that turns raw data into your most valuable asset: actionable insights. We&apos;ll track the metrics that actually matter for growth and build a clear picture of what&apos;s working and what&apos;s not.
               </p>
               <div className="w-24 h-1 bg-accent-highlight mx-auto rounded-full mt-6" />
             </div>
