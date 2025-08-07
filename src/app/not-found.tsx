@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import { Home, Mail } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -11,27 +12,29 @@ export default function NotFound() {
         </div>
 
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-          Oops! This Page
+          Oops! 
           <br />
-          <span className="gradient-text">Got Lost in Space.</span>
+          <span className="gradient-text text-2xl sm:text-3xl lg:text-4xl ">This Page Got Lost in Space.</span>
         </h1>
 
-        <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
-          The page you&apos;re looking for doesn&apos;t exist or has been moved. But don&apos;t worry—we&apos;ve got plenty of amazing things to show you!
+        <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
+          The page you&apos;re looking for doesn&apos;t exist or has been moved. But don&apos;t worry, we&apos;ve got plenty of amazing things to show you!
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link 
             href="/" 
-            className="inline-block bg-accent-highlight text-white px-6 py-3 rounded-lg hover:bg-accent-highlight/90 transition-colors font-medium"
+            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-gray-900 text-gray-100 hover:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group h-12 px-5"
           >
             Back to Home
+            <Home className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
           </Link>
           <Link 
             href="/#contact" 
-            className="inline-block bg-secondary text-foreground px-6 py-3 rounded-lg hover:bg-secondary/80 transition-colors font-medium"
+            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-foreground hover:text-accent-highlight transition-all duration-300 group h-12 px-5"
           >
             Get in Touch
+            <Mail className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
           </Link>
         </div>
       </div>
