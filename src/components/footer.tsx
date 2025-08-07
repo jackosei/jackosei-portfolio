@@ -34,7 +34,7 @@ export default function Footer() {
              </div>
             
             <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-md">
-            Professional creative developer building websites and brands that act as growth engines, working as hard as their founders do to attract users and drive revenue.
+            Professional creative developer building websites and designing brands that act as growth engines, working as hard as their founders do to attract users and drive revenue.
             </p>
             
             <div className="flex space-x-3 sm:space-x-4">
@@ -43,7 +43,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 sm:p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-all duration-300 hover:scale-110 touch-manipulation"
-                aria-label="LinkedIn"
+                aria-label="Connect on LinkedIn"
               >
                 <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
@@ -52,14 +52,14 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2.5 sm:p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-all duration-300 hover:scale-110 touch-manipulation"
-                aria-label="GitHub"
+                aria-label="View GitHub profile"
               >
                 <Github className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <a
                 href="mailto:jackosei@gmail.com"
                 className="p-2.5 sm:p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-all duration-300 hover:scale-110 touch-manipulation"
-                aria-label="Email"
+                aria-label="Send an email"
               >
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
@@ -152,7 +152,7 @@ export default function Footer() {
             
             <div className="flex items-center gap-2 text-muted-foreground text-xs sm:text-sm">
               <span>Made with</span>
-              <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-red-500" />
+              <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-red-500" aria-hidden="true" />
               <span>in Ghana</span>
             </div>
             

@@ -10,7 +10,6 @@ import StartupPainPoints from '@/components/startup-pain-points'
 import ContactCTA from '@/components/contact-cta'
 import Footer from '@/components/footer'
 import GSAPInteractions from '@/components/gsap-interactions'
-import ClientCarousel from '@/components/client-carousel'
 
 export const metadata: Metadata = {
   title: 'Jack Osei - Web Designer & Developer',
@@ -23,18 +22,23 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
       <GSAPInteractions />
-      <Navigation />
-      <HeroSection />
-      <StartupPainPoints />
-      <ServicesSection />
-      <ProcessSection />
-      <SelectedWork />
-      <Testimonials />
-      <AboutSection />
-      <ContactCTA />
-      <ClientCarousel />
+      <header>
+        <Navigation />
+      </header>
+      
+      <div className="flex-grow">
+        <HeroSection />
+        <StartupPainPoints />
+        <ServicesSection />
+        <ProcessSection />
+        <SelectedWork />
+        <Testimonials />
+        <AboutSection />
+        <ContactCTA />
+      </div>
+
       <Footer />
     </div>
   )

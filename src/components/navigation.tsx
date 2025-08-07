@@ -12,19 +12,20 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const { theme, setTheme } = useTheme();
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setTheme("dark");
+    setMounted(true);
+  }, []);
 
+  useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
       
-      // Get all sections
       const sections = ["home", "services", "work", "about", "contact"];
       const scrollPosition = window.scrollY + 100;
 
-      // Find which section is currently in view
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
         if (section && section.offsetTop <= scrollPosition) {
@@ -85,13 +86,15 @@ export default function Navigation() {
             className="flex items-center gap-2"
           >
                          <div className="w-10 h-10 sm:w-12 sm:h-12 relative">
-               <Image
-                 src={theme === "dark" ? "/images/JKO Light.svg" : "/images/JKO Dark.svg"}
-                 alt="Jack Osei Logo"
-                 fill
-                 className="object-contain"
-                 sizes="(max-width: 640px) 32px, 48px"
-               />
+              {mounted && (
+              <Image
+                src={theme === "dark" ? "/images/JKO Light.svg" : "/images/JKO Dark.svg"}
+                alt="Jack Osei Logo"
+                fill
+                className="object-contain"
+                sizes="(max-width: 640px) 32px, 48px"
+              />
+              )}
              </div>
           </motion.div>
 

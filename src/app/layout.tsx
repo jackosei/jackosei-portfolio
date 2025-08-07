@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Plus_Jakarta_Sans, Albert_Sans } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/toaster'
@@ -11,19 +11,13 @@ const plusJakarta = Plus_Jakarta_Sans({
   display: 'swap',
 })
 
-const albertSans = Albert_Sans({ 
-  subsets: ['latin'],
-  variable: '--font-albert',
-  display: 'swap',
-})
-
 export const metadata: Metadata = {
   title: {
-    default: 'Jack Osei - Web Designer & Developer',
+    default: 'Jack Osei - Founder&apos;s Tech Friend & Web Developer',
     template: '%s | Jack Osei'
   },
-  description: 'Professional web designer and developer specializing in modern, responsive websites and web applications. Based in Ghana with expertise in React, Next.js, and modern web technologies.',
-  keywords: ['web designer', 'web developer', 'React', 'Next.js', 'Ghana', 'portfolio', 'frontend developer'],
+  description: 'As a founder&apos;s tech partner, I build conversion-focused websites that act as growth engines, attracting users and driving revenue for startups.',
+  keywords: ['startup web developer', 'founder tech partner', 'conversion-focused websites', 'React developer', 'Next.js developer', 'Webflow developer', 'Shopify developer'],
   authors: [{ name: 'Jack Osei' }],
   creator: 'Jack Osei',
   publisher: 'Jack Osei',
@@ -42,16 +36,16 @@ export const metadata: Metadata = {
     apple: '/Favicon.ico',
   },
   openGraph: {
-    title: 'Jack Osei - Web Designer & Developer',
-    description: 'Professional web designer and developer specializing in modern, responsive websites and web applications.',
+    title: 'Jack Osei - Founder&apos;s Tech Friend & Web Developer',
+    description: 'I build conversion-focused websites for founders that turn visitors into customers.',
     url: 'https://jackosei.com',
     siteName: 'Jack Osei Portfolio',
     images: [
       {
-        url: '/images/JKO Dark.svg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Jack Osei - Web Designer & Developer',
+        alt: 'Jack Osei - The Founder&apos;s Tech Friend',
       },
     ],
     locale: 'en_US',
@@ -59,9 +53,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jack Osei - Web Designer & Developer',
-    description: 'Professional web designer and developer specializing in modern, responsive websites and web applications.',
-    images: ['/images/JKO Dark.svg'],
+    title: 'Jack Osei - Founder&apos;s Tech Friend & Web Developer',
+    description: 'I build conversion-focused websites for founders that turn visitors into customers.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -86,10 +80,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover" />
-      </head>
-      <body className={`${plusJakarta.variable} ${albertSans.variable} font-sans`}>
+      <body className={`${plusJakarta.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -97,7 +88,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider>
-            {children}
+            <main>{children}</main>
             <Toaster />
           </TooltipProvider>
         </ThemeProvider>

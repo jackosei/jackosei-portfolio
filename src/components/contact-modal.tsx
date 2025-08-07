@@ -78,6 +78,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 </div>
                 <button
                   onClick={onClose}
+                  aria-label="Close modal"
                   className="p-2 rounded-full hover:bg-secondary transition-colors"
                 >
                   <X className="w-5 h-5" />

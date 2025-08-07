@@ -74,6 +74,7 @@ export default function AboutSection() {
                 href="https://www.linkedin.com/in/jackosei/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Connect on LinkedIn"
                 className="p-2.5 sm:p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-all duration-300 hover:scale-110 touch-manipulation"
               >
                 <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -82,12 +83,14 @@ export default function AboutSection() {
                 href="https://github.com/jackosei"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="View GitHub profile"
                 className="p-2.5 sm:p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-all duration-300 hover:scale-110 touch-manipulation"
               >
                 <Github className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <a
                 href="mailto:jackosei@gmail.com"
+                aria-label="Send an email"
                 className="p-2.5 sm:p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-all duration-300 hover:scale-110 touch-manipulation"
               >
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
