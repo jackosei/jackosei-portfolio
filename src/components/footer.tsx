@@ -24,8 +24,7 @@ export default function Footer() {
             </div>
             
             <p className="text-muted-foreground mb-8 leading-relaxed max-w-md">
-              Professional web designer and developer passionate about creating 
-              exceptional digital experiences that drive business growth and user engagement.
+            Professional creative developer building websites and brands that act as growth engines, working as hard as their founders do to attract users and drive revenue.
             </p>
             
             <div className="flex space-x-4">
@@ -100,7 +99,7 @@ export default function Footer() {
                 <Mail className="w-5 h-5 text-accent-highlight mt-0.5" />
                 <div>
                   <p className="font-medium text-foreground">Email</p>
-                  <p>jackosei@gmail.com</p>
+                  <p>hello@jackosei.com</p>
                   <p className="text-sm mt-1">Available for new projects</p>
                 </div>
               </div>
@@ -109,7 +108,7 @@ export default function Footer() {
                 <Phone className="w-5 h-5 text-accent-highlight mt-0.5" />
                 <div>
                   <p className="font-medium text-foreground">Phone</p>
-                  <p>+233 XX XXX XXXX</p>
+                  <p>+233 55 910 9933</p>
                   <p className="text-sm mt-1">Mon-Fri 9AM-6PM GMT</p>
                 </div>
               </div>
@@ -137,7 +136,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-center md:text-left">
               <p className="text-muted-foreground text-sm">
-                © 2024 Jack Osei. All rights reserved.
+                © {new Date().getFullYear()} Jack Osei. All rights reserved.
               </p>
             </div>
             
