@@ -13,14 +13,14 @@ const services = [
   },
   {
     icon: <Palette className="w-6 h-6 sm:w-8 sm:h-8" />,
-    title: "The Conversion Engine (Webflow & WordPress)",
-    description: "Need a powerful marketing site that your team can actually use? I build beautiful, high-performing websites on Webflow and WordPress that are easy to manage and optimized for SEO and lead generation.",
+    title: "The Conversion Engine",
+    description: "Need a powerful marketing site that your team can actually use? I design beautiful, high-performing websites on Webflow and WordPress that are easy to manage and optimized for SEO and lead generation.",
     features: ["Custom Development", "Mobile-First Design", "CMS Integration", "Conversion Optimization"],
   },
   {
     icon: <ShoppingCart className="w-6 h-6 sm:w-8 sm:h-8" />,
-    title: "The E-commerce Accelerator (Shopify)",
-    description: "Ready to sell? I create Shopify experiences that are engineered to maximize sales, from custom themes and payment integrations to fine-tuned conversion funnels.",
+    title: "The E-commerce Accelerator",
+    description: "Ready to sell? I create Shopify & WooCommerce experiences that are engineered to maximize sales, from custom themes and payment integrations to fine-tuned conversion funnels.",
     features: ["Product Catalog", "Custom Themes", "Payment Integration", "Conversion Funnels"],
   },
   {
