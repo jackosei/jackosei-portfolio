@@ -374,8 +374,31 @@ export default function WebDesignDevelopmentPage() {
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <ContactCTA />
+              {/* Contact CTA */}
+        <ContactCTA 
+          title="Ready to Build Your"
+          subtitle="Digital Foundation?"
+          description="Let's create a website that opens doors and builds the credibility your startup deserves. Book a free strategy call to discuss your digital goals."
+          primaryButtonText="Book a Free Strategy Call"
+          secondaryButtonText="Quick Contact"
+          valueProps={[
+            {
+              icon: <Target className="w-5 h-5 sm:w-6 sm:h-6 text-accent-highlight" />,
+              title: "Free Strategy Call",
+              description: "Get personalized advice for your website project"
+            },
+            {
+              icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-accent-highlight" />,
+              title: "15-Minute Session",
+              description: "Quick, focused discussion about your digital needs"
+            },
+            {
+              icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-accent-highlight" />,
+              title: "Actionable Plan",
+              description: "Walk away with specific next steps for your project"
+            }
+          ]}
+        />
       </div>
 
       <Footer />

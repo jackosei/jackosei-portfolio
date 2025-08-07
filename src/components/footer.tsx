@@ -99,10 +99,10 @@ export default function Footer() {
                 </a>
               </li>
               <li className="hover:text-foreground transition-colors cursor-pointer">
-                E-Commerce Development
+                <a href="/ecommerce-development">E-Commerce Development</a>
               </li>
               <li className="hover:text-foreground transition-colors cursor-pointer">
-                SEO Optimization
+                <a href="/seo-optimization">SEO Optimization</a>
               </li>
               <li className="hover:text-foreground transition-colors cursor-pointer">
                 Performance Optimization

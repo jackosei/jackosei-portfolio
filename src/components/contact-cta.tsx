@@ -6,7 +6,43 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ContactModal from "./contact-modal";
 
-export default function ContactCTA() {
+interface ContactCTAProps {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  primaryButtonText?: string;
+  secondaryButtonText?: string;
+  valueProps?: Array<{
+    icon: React.ReactNode;
+    title: string;
+    description: string;
+  }>;
+}
+
+export default function ContactCTA({
+  title = "Stop Guessing.",
+  subtitle = "Start Growing.",
+  description = "Your website has untapped potential. Let's find it. Book a free, no-pressure 15-minute strategy call. I'll give you at least three actionable insights you can use to improve your conversion rate immediately—whether we work together or not.",
+  primaryButtonText = "Book Your Free Strategy Call",
+  secondaryButtonText = "Quick Contact",
+  valueProps = [
+    {
+      icon: <Target className="w-5 h-5 sm:w-6 sm:h-6 text-accent-highlight" />,
+      title: "3 Specific Insights",
+      description: "Get actionable advice to improve your conversion rate"
+    },
+    {
+      icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-accent-highlight" />,
+      title: "15-Minute Call",
+      description: "Quick, focused, no pressure - just value"
+    },
+    {
+      icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-accent-highlight" />,
+      title: "Immediate Value",
+      description: "Walk away with specific next steps"
+    }
+  ]
+}: ContactCTAProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showInlineForm, setShowInlineForm] = useState(false);
   const [formData, setFormData] = useState({
@@ -59,18 +95,21 @@ export default function ContactCTA() {
               className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-accent-highlight/10 text-accent-highlight rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6"
             >
               <Send className="w-3 h-3 sm:w-4 sm:h-4" />
-              Get In Touch
+              {subtitle}
             </motion.div>
             
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-foreground">
-              Stop Guessing.
-              <br />
-              <span className="gradient-text">Start Growing.</span>
+              {title}
+              {subtitle && (
+                <>
+                  <br />
+                  <span className="gradient-text">{subtitle}</span>
+                </>
+              )}
             </h2>
             
             <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed">
-              Your website has untapped potential. Let&apos;s find it. Book a free, no-pressure 15-minute strategy call. 
-              I&apos;ll give you at least three actionable insights you can use to improve your conversion rate immediately—whether we work together or not.
+              {description}
             </p>
 
             {!showInlineForm ? (
@@ -83,27 +122,24 @@ export default function ContactCTA() {
               >
                 {/* Value Proposition Cards */}
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
-                  <div className="bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 rounded-xl p-4 sm:p-6">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-highlight/10 rounded-full flex items-center justify-center mb-3 sm:mb-4 mx-auto">
-                      <Target className="w-5 h-5 sm:w-6 sm:h-6 text-accent-highlight" />
+                  {valueProps.map((prop, index) => (
+                    <div 
+                      key={index}
+                      className={`bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 rounded-xl p-4 sm:p-6 ${
+                        valueProps.length === 3 && index === 2 ? 'sm:col-span-2 lg:col-span-1' : ''
+                      }`}
+                    >
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-highlight/10 rounded-full flex items-center justify-center mb-3 sm:mb-4 mx-auto">
+                        {prop.icon}
+                      </div>
+                      <h3 className="font-semibold text-foreground mb-2 text-sm sm:text-base">
+                        {prop.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-muted-foreground">
+                        {prop.description}
+                      </p>
                     </div>
-                    <h3 className="font-semibold text-foreground mb-2 text-sm sm:text-base">3 Specific Insights</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Get actionable advice to improve your conversion rate</p>
-                  </div>
-                  <div className="bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 rounded-xl p-4 sm:p-6">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-highlight/10 rounded-full flex items-center justify-center mb-3 sm:mb-4 mx-auto">
-                      <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-accent-highlight" />
-                    </div>
-                    <h3 className="font-semibold text-foreground mb-2 text-sm sm:text-base">15-Minute Call</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Quick, focused, no pressure - just value</p>
-                  </div>
-                  <div className="bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 rounded-xl p-4 sm:p-6 sm:col-span-2 lg:col-span-1">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-highlight/10 rounded-full flex items-center justify-center mb-3 sm:mb-4 mx-auto">
-                      <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-accent-highlight" />
-                    </div>
-                    <h3 className="font-semibold text-foreground mb-2 text-sm sm:text-base">Immediate Value</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Walk away with specific next steps</p>
-                  </div>
+                  ))}
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
@@ -114,7 +150,7 @@ export default function ContactCTA() {
                     showArrow
                     className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4"
                   >
-                    Book Your Free Strategy Call
+                    {primaryButtonText}
                   </Button>
                   <Button
                     onClick={() => setShowInlineForm(true)}
@@ -123,7 +159,7 @@ export default function ContactCTA() {
                     showArrow
                     className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4"
                   >
-                    Quick Contact
+                    {secondaryButtonText}
                   </Button>
                 </div>
               </motion.div>
