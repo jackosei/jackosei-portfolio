@@ -28,37 +28,37 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="section-padding bg-background section-divider">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-accent-highlight/10 text-accent-highlight rounded-full text-sm font-medium mb-6"
+            className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-accent-highlight/10 text-accent-highlight rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6"
           >
-            <Star className="w-4 h-4" />
+            <Star className="w-3 h-3 sm:w-4 sm:h-4" />
             Testimonials
           </motion.div>
-          <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-foreground">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-foreground">
             Founders Who
             <br />
             <span className="gradient-text">Got Results</span>
           </h2>
           
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Don&apos;t just take my word for it. Here&apos;s what startup founders have to say 
             about the business impact of working together.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -66,10 +66,10 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-background p-8 rounded-2xl border hover:shadow-lg transition-all duration-300"
+              className="bg-background p-6 sm:p-8 rounded-xl sm:rounded-2xl border hover:shadow-lg transition-all duration-300"
             >
-              <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
+              <div className="flex items-center justify-between mb-4 sm:mb-6">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
                   <Image
                     src={testimonial.companyLogo}
                     alt={`${testimonial.name} company logo`}
@@ -80,16 +80,16 @@ export default function Testimonials() {
                 </div>
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
               </div>
-              <p className="text-muted-foreground mb-6 italic">
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 italic">
                 &quot;{testimonial.content}&quot;
               </p>
               <div>
-                <p className="font-semibold text-foreground">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                <p className="font-semibold text-foreground text-sm sm:text-base">{testimonial.name}</p>
+                <p className="text-xs sm:text-sm text-muted-foreground">{testimonial.role}</p>
               </div>
             </motion.div>
           ))}

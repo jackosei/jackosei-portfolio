@@ -68,6 +68,8 @@
   body {
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
+    /* Improve touch scrolling on mobile */
+    -webkit-overflow-scrolling: touch;
   }
   
   /* Enhanced typography with new fonts */
@@ -79,30 +81,57 @@
   html {
     scroll-behavior: smooth;
   }
+
+  /* Mobile-first responsive text sizing */
+  h1 {
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  h3 {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  h4 {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
+  }
+  
+  /* Improve touch targets on mobile */
+  button, a {
+    @apply touch-manipulation;
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  body, html {
+    overflow-x: hidden;
+  }
 }
 
 @layer components {
   /* Enhanced button styles */
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium transition-all duration-300 hover:bg-primary/90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground rounded-full font-medium transition-all duration-300 hover:bg-primary/90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 text-sm sm:text-base;
   }
   
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-transparent border border-border text-foreground rounded-full font-medium transition-all duration-300 hover:bg-secondary hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-transparent border border-border text-foreground rounded-full font-medium transition-all duration-300 hover:bg-secondary hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 text-sm sm:text-base;
   }
   
   .btn-accent {
-    @apply inline-flex items-center justify-center px-8 py-4 bg-accent-highlight text-accent-highlight-foreground rounded-full font-medium transition-all duration-300 hover:bg-accent-highlight/90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent-highlight focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 bg-accent-highlight text-accent-highlight-foreground rounded-full font-medium transition-all duration-300 hover:bg-accent-highlight/90 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-accent-highlight focus:ring-offset-2 text-sm sm:text-base;
   }
   
   /* Card styles */
   .card-hover {
-    @apply bg-card border rounded-2xl p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-accent-highlight/20;
+    @apply bg-card border rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-accent-highlight/20;
   }
   
   /* Section styles */
   .section-padding {
-    @apply py-24 px-6;
+    @apply py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6;
   }
   
   /* Section separation */
@@ -143,23 +172,74 @@
   }
   
   .heading-xl {
-    @apply font-display text-4xl lg:text-6xl font-bold leading-tight;
+    @apply font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
   }
   
   .heading-lg {
-    @apply font-display text-3xl lg:text-4xl font-bold leading-tight;
+    @apply font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
   }
   
   .heading-md {
-    @apply font-display text-2xl lg:text-3xl font-bold leading-tight;
+    @apply font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight;
   }
   
   .body-lg {
-    @apply font-sans text-lg leading-relaxed;
+    @apply font-sans text-base sm:text-lg leading-relaxed;
   }
   
   .body-md {
-    @apply font-sans text-base leading-relaxed;
+    @apply font-sans text-sm sm:text-base leading-relaxed;
+  }
+
+  /* Mobile-optimized spacing utilities */
+  .mobile-padding {
+    @apply px-4 sm:px-6;
+  }
+  
+  .mobile-margin {
+    @apply mx-4 sm:mx-6;
+  }
+  
+  /* Mobile-optimized grid layouts */
+  .mobile-grid {
+    @apply grid gap-4 sm:gap-6 md:gap-8;
+  }
+  
+  .mobile-grid-2 {
+    @apply mobile-grid sm:grid-cols-2;
+  }
+  
+  .mobile-grid-3 {
+    @apply mobile-grid sm:grid-cols-2 lg:grid-cols-3;
+  }
+  
+  /* Mobile-optimized text sizing */
+  .mobile-text-sm {
+    @apply text-xs sm:text-sm;
+  }
+  
+  .mobile-text-base {
+    @apply text-sm sm:text-base;
+  }
+  
+  .mobile-text-lg {
+    @apply text-base sm:text-lg;
+  }
+  
+  .mobile-text-xl {
+    @apply text-lg sm:text-xl;
+  }
+  
+  .mobile-text-2xl {
+    @apply text-xl sm:text-2xl;
+  }
+  
+  .mobile-text-3xl {
+    @apply text-2xl sm:text-3xl;
+  }
+  
+  .mobile-text-4xl {
+    @apply text-3xl sm:text-4xl;
   }
 }
 
@@ -252,5 +332,31 @@
   
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-accent-highlight/40;
+  }
+
+  /* Mobile-specific utilities */
+  .mobile-only {
+    @apply block sm:hidden;
+  }
+  
+  .desktop-only {
+    @apply hidden sm:block;
+  }
+  
+  .mobile-touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Prevent text selection on mobile for better UX */
+  .no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Mobile-optimized focus states */
+  .mobile-focus {
+    @apply focus:outline-none focus:ring-2 focus:ring-accent-highlight focus:ring-offset-2;
   }
 } 

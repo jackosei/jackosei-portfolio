@@ -32,6 +32,28 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (isOpen && !target.closest('.mobile-menu-container')) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const navItems = [
     { name: "Home", href: "#home", id: "home" },
     { name: "Services", href: "#services", id: "services" },
@@ -48,8 +70,8 @@ export default function Navigation() {
         scrolled ? "glass border-b" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -57,10 +79,10 @@ export default function Navigation() {
             transition={{ delay: 0.2 }}
             className="flex items-center gap-2"
           >
-            <div className="w-8 h-8 bg-accent-highlight rounded-lg flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-accent-highlight-foreground" />
+            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-accent-highlight rounded-lg flex items-center justify-center">
+              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-accent-highlight-foreground" />
             </div>
-            <span className="text-xl font-bold text-foreground">Jack Osei</span>
+            <span className="text-lg sm:text-xl font-bold text-foreground">Jack Osei</span>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -95,14 +117,15 @@ export default function Navigation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="md:hidden flex items-center space-x-4"
+            className="md:hidden flex items-center space-x-3"
           >
             <ThemeSwitcher />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground p-2 rounded-lg hover:bg-secondary transition-colors"
+              className="text-foreground p-2 rounded-lg hover:bg-secondary transition-colors touch-manipulation"
+              aria-label="Toggle mobile menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </motion.div>
         </div>
@@ -115,9 +138,9 @@ export default function Navigation() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden"
+              className="md:hidden overflow-hidden mobile-menu-container"
             >
-              <div className="py-6 border-t border-border/50 space-y-4">
+              <div className="py-4 sm:py-6 border-t border-border/50 space-y-2 bg-background/95 backdrop-blur-md">
                 {navItems.map((item, index) => (
                   <motion.a
                     key={item.name}
@@ -126,10 +149,10 @@ export default function Navigation() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     onClick={() => setIsOpen(false)}
-                    className={`block py-3 transition-colors font-medium ${
+                    className={`block py-3 px-4 rounded-lg transition-colors font-medium touch-manipulation ${
                       activeSection === item.id 
-                        ? "text-accent-highlight" 
-                        : "text-foreground hover:text-accent-highlight"
+                        ? "text-accent-highlight bg-accent-highlight/10" 
+                        : "text-foreground hover:text-accent-highlight hover:bg-secondary/50"
                     }`}
                   >
                     {item.name}

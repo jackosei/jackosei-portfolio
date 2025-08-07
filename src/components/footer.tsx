@@ -6,52 +6,52 @@ import { Linkedin, Github, Mail, Heart, Sparkles, Phone, MapPin } from "lucide-r
 export default function Footer() {
   return (
     <footer className="bg-secondary/20 border-t">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-3 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
           {/* Brand Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="md:col-span-1"
+            className="sm:col-span-2 lg:col-span-1"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-primary-foreground" />
+            <div className="flex items-center gap-3 mb-4 sm:mb-6">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary rounded-lg flex items-center justify-center">
+                <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
               </div>
-              <span className="text-2xl font-bold text-foreground">Jack Osei</span>
+              <span className="text-xl sm:text-2xl font-bold text-foreground">Jack Osei</span>
             </div>
             
-            <p className="text-muted-foreground mb-8 leading-relaxed max-w-md">
+            <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-md">
             Professional creative developer building websites and brands that act as growth engines, working as hard as their founders do to attract users and drive revenue.
             </p>
             
-            <div className="flex space-x-4">
+            <div className="flex space-x-3 sm:space-x-4">
               <a
                 href="https://www.linkedin.com/in/jackosei/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-all duration-300 hover:scale-110"
+                className="p-2.5 sm:p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-all duration-300 hover:scale-110 touch-manipulation"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <a
                 href="https://github.com/jackosei"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-all duration-300 hover:scale-110"
+                className="p-2.5 sm:p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-all duration-300 hover:scale-110 touch-manipulation"
                 aria-label="GitHub"
               >
-                <Github className="w-5 h-5" />
+                <Github className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <a
                 href="mailto:jackosei@gmail.com"
-                className="p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-all duration-300 hover:scale-110"
+                className="p-2.5 sm:p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-all duration-300 hover:scale-110 touch-manipulation"
                 aria-label="Email"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             </div>
           </motion.div>
@@ -63,8 +63,8 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h4 className="font-bold text-lg mb-6 text-foreground">Services</h4>
-            <ul className="space-y-3 text-muted-foreground">
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-foreground">Services</h4>
+            <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-muted-foreground">
               <li className="hover:text-foreground transition-colors cursor-pointer">
                 Web Design & Development
               </li>
@@ -93,32 +93,32 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="font-bold text-lg mb-6 text-foreground">Contact</h4>
-            <div className="space-y-4 text-muted-foreground">
+            <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-foreground">Contact</h4>
+            <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-muted-foreground">
               <div className="flex items-start space-x-3">
-                <Mail className="w-5 h-5 text-accent-highlight mt-0.5" />
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-accent-highlight mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Email</p>
                   <p>hello@jackosei.com</p>
-                  <p className="text-sm mt-1">Available for new projects</p>
+                  <p className="text-xs sm:text-sm mt-1">Available for new projects</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-3">
-                <Phone className="w-5 h-5 text-accent-highlight mt-0.5" />
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-accent-highlight mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Phone</p>
                   <p>+233 55 910 9933</p>
-                  <p className="text-sm mt-1">Mon-Fri 9AM-6PM GMT</p>
+                  <p className="text-xs sm:text-sm mt-1">Mon-Fri 9AM-6PM GMT</p>
                 </div>
               </div>
               
               <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-accent-highlight mt-0.5" />
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-accent-highlight mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Location</p>
                   <p>Ghana</p>
-                  <p className="text-sm mt-1">Available for remote work worldwide</p>
+                  <p className="text-xs sm:text-sm mt-1">Available for remote work worldwide</p>
                 </div>
               </div>
             </div>
@@ -131,22 +131,22 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="border-t mt-12 pt-8"
+          className="border-t mt-8 sm:mt-12 pt-6 sm:pt-8"
         >
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-center md:text-left">
-              <p className="text-muted-foreground text-sm">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div className="text-center sm:text-left">
+              <p className="text-muted-foreground text-xs sm:text-sm">
                 © {new Date().getFullYear()} Jack Osei. All rights reserved.
               </p>
             </div>
             
-            <div className="flex items-center gap-2 text-muted-foreground text-sm">
+            <div className="flex items-center gap-2 text-muted-foreground text-xs sm:text-sm">
               <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-500" />
+              <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-red-500" />
               <span>in Ghana</span>
             </div>
             
-            <div className="flex items-center gap-6 text-sm text-muted-foreground">
+            <div className="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm text-muted-foreground">
               <a href="/privacy" className="hover:text-foreground transition-colors">
                 Privacy Policy
               </a>
