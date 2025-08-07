@@ -36,37 +36,37 @@ export default function HeroSection() {
             className="inline-flex items-center gap-2 px-4 py-2 bg-accent-highlight/10 text-accent-highlight rounded-full text-sm font-medium mb-6"
           >
             <div className="w-2 h-2 bg-accent-highlight rounded-full animate-pulse"></div>
-            Available for new projects
+            The Founders&apos; Tech Friend
           </motion.div>
           
           <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6 text-foreground">
-            Crafting Digital
+            Your Website Should Work
             <br />
-            <span className="gradient-text">Experiences</span>
+            <span className="gradient-text">as Hard as You Do</span>
           </h1>
           
           <p className="text-lg mb-8 max-w-lg text-muted-foreground leading-relaxed">
-            Professional, premium websites engineered from the ground up for user experience and conversion, 
-            turning visitors into customers. Passionate about creating exceptional digital experiences that drive business growth.
+            You&apos;re building a game-changing product and chasing your first 1,000 users. Your website shouldn&apos;t be a pretty brochure; 
+            it should be your #1 growth engine. I build conversion-focused websites for founders that turn visitors into customers.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
-              onClick={() => scrollToSection("services")}
+              onClick={() => scrollToSection("contact")}
               variant="primary"
               size="lg"
               showArrow
             >
-              Explore My Work
+              Get Your Free Website Audit
             </Button>
             <Button
-            onClick={() => scrollToSection("contact")}
+            onClick={() => scrollToSection("work")}
               variant="secondary"
               size="lg"
               showArrow
               external
             >
-              Get In Touch
+              See My Work
             </Button>
           </div>
           

@@ -47,12 +47,14 @@ export default function Testimonials() {
             Testimonials
           </motion.div>
           <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-foreground">
-            What Clients Say
+            Founders Who
+            <br />
+            <span className="gradient-text">Got Results</span>
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Don&apos;t just take my word for it. Here&apos;s what my clients have to say 
-            about working together and the results we&apos;ve achieved.
+            Don&apos;t just take my word for it. Here&apos;s what startup founders have to say 
+            about the business impact of working together.
           </p>
         </motion.div>
 

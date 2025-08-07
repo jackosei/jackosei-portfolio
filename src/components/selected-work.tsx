@@ -61,13 +61,14 @@ export default function SelectedWork() {
           </motion.div>
           
           <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-foreground">
-            Selected Work
-            
+            Real Results for
+            <br />
+            <span className="gradient-text">Real Startups</span>
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            A showcase of my best projects, demonstrating expertise in modern web technologies, 
-            creative design solutions, and successful client collaborations.
+            See how I&apos;ve helped startups turn their websites into revenue-generating assets. 
+            Each project demonstrates the conversion-focused approach that drives actual business growth.
           </p>
         </motion.div>
 

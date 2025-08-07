@@ -47,20 +47,20 @@ export default function AboutSection() {
             </motion.div>
             
             <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-foreground">
-              Strategy <span className="gradient-text">+</span> Design <span className="gradient-text">+</span> Code
-              
+              Your Tech Friend
+              <br />
+              <span className="gradient-text">in the Trenches</span>
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              I&apos;m a passionate web designer and developer with a focus on creating 
-              exceptional digital experiences. With years of experience in modern web technologies, 
-              I help businesses establish a strong online presence that drives growth and engagement.
+              I&apos;ve spent years watching brilliant founders get stuck with websites that failed them. 
+              They had incredible ideas but were held back by slow, expensive, and ineffective digital platforms.
             </p>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              My approach combines creative design with technical excellence, ensuring every project 
-              not only looks great but also performs flawlessly. I believe in building relationships 
-              with clients and delivering solutions that exceed expectations.
+              I started this practice to fix that. My entire process is built around the founder&apos;s reality: 
+              you need to move fast, show traction, and make every dollar count. I&apos;m not just a freelancer you hire for a task; 
+              I&apos;m your strategic partner, your technical advisor, and the person who ensures your online presence is a competitive advantage, not a liability.
             </p>
             
 

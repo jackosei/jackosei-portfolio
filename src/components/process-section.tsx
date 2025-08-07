@@ -6,23 +6,23 @@ import { Lightbulb, Code, Palette, Rocket } from "lucide-react";
 const steps = [
   {
     icon: <Lightbulb className="w-8 h-8" />,
-    title: "Discovery & Planning",
-    description: "Understanding your business goals, target audience, and project requirements to create a strategic roadmap.",
+    title: "Strategy & Goals",
+    description: "Understanding your business model, target customers, and revenue goals to create a conversion-focused roadmap.",
   },
   {
     icon: <Palette className="w-8 h-8" />,
-    title: "Design & Prototyping",
-    description: "Creating beautiful, user-friendly designs and interactive prototypes to visualize the final product.",
+    title: "Design for Conversion",
+    description: "Creating user experiences that guide visitors toward taking action, not just looking pretty.",
   },
   {
     icon: <Code className="w-8 h-8" />,
-    title: "Development & Testing",
-    description: "Building the website with clean, efficient code and thorough testing to ensure optimal performance.",
+    title: "Build & Test",
+    description: "Building your website with conversion optimization built-in, then testing to ensure it performs.",
   },
   {
     icon: <Rocket className="w-8 h-8" />,
-    title: "Launch & Optimization",
-    description: "Deploying your website and implementing ongoing optimizations for better performance and SEO.",
+    title: "Launch & Scale",
+    description: "Getting your website live quickly, then optimizing based on real user data to increase conversions.",
   },
 ];
 
@@ -48,12 +48,14 @@ export default function ProcessSection() {
             Process
           </motion.div>
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-            How I Work
+            From Idea to
+            <br />
+            <span className="gradient-text">Revenue in Weeks</span>
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            A proven process that ensures your project is delivered on time, within budget, 
-            and exceeds your expectations. From initial concept to final deployment.
+            A proven process that gets your website live quickly and generating revenue fast. 
+            No endless revisions or technical delays—just results.
           </p>
         </motion.div>
 

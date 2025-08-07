@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { X, Mail, Phone, MapPin, Send, CheckCircle, Clock, Target, Zap } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -15,6 +15,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    company: "",
+    website: "",
+    projectType: "website-audit",
     message: ""
   });
 
@@ -27,13 +30,16 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       setFormData({
         name: "",
         email: "",
+        company: "",
+        website: "",
+        projectType: "website-audit",
         message: ""
       });
       onClose();
-    }, 3000);
+    }, 4000);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -61,13 +67,13 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
           >
-            <div className="bg-background rounded-2xl shadow-2xl max-w-xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="bg-background rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b">
                 <div>
-                  <h2 className="text-2xl font-bold text-foreground">Get In Touch</h2>
+                  <h2 className="text-2xl font-bold text-foreground">Free Strategy Call</h2>
                   <p className="text-muted-foreground mt-1">
-                    Let&apos;s discuss your project and create something amazing together
+                    Get 3 actionable insights to improve your conversion rate
                   </p>
                 </div>
                 <button
@@ -82,70 +88,134 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               <div className="p-6">
                 {!isSubmitted ? (
                   <div className="space-y-6">
-                    {/* Contact Info */}
-                    <div className="text-center mb-8">
-                      <div className="flex justify-center space-x-6 mb-4">
-                        <div className="flex items-center space-x-2">
-                          <Mail className="w-4 h-4 text-accent-highlight" />
-                          <span className="text-sm text-muted-foreground">jackosei@gmail.com</span>
+                    {/* Value Proposition */}
+                    <div className="bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 rounded-xl p-6 mb-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 bg-accent-highlight/10 rounded-full flex items-center justify-center">
+                          <Target className="w-5 h-5 text-accent-highlight" />
                         </div>
-                        <div className="flex items-center space-x-2">
-                          <MapPin className="w-4 h-4 text-accent-highlight" />
-                          <span className="text-sm text-muted-foreground">Ghana</span>
+                        <div>
+                          <h3 className="font-semibold text-foreground">What You'll Get</h3>
+                          <p className="text-sm text-muted-foreground">15-minute call, no pressure</p>
                         </div>
                       </div>
-                      <p className="text-sm text-muted-foreground">
-                        Available for new projects • Remote work worldwide
-                      </p>
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-accent-highlight" />
+                          <span className="text-sm">3 conversion insights</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Clock className="w-4 h-4 text-accent-highlight" />
+                          <span className="text-sm">15-minute call</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Zap className="w-4 h-4 text-accent-highlight" />
+                          <span className="text-sm">Immediate value</span>
+                        </div>
+                      </div>
                     </div>
 
                     {/* Contact Form */}
                     <form onSubmit={handleSubmit} className="space-y-4">
-                      <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                          Name *
-                        </label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          value={formData.name}
-                          onChange={handleInputChange}
-                          required
-                          className="w-full px-4 py-3 rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-highlight focus:border-transparent transition-all"
-                          placeholder="Your full name"
-                        />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                            Name *
+                          </label>
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                            required
+                            className="w-full px-4 py-3 rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-highlight focus:border-transparent transition-all"
+                            placeholder="Your name"
+                          />
+                        </div>
+                        
+                        <div>
+                          <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                            Email Address *
+                          </label>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                            required
+                            className="w-full px-4 py-3 rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-highlight focus:border-transparent transition-all"
+                            placeholder="your.email@company.com"
+                          />
+                        </div>
+                      </div>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
+                            Company/Startup
+                          </label>
+                          <input
+                            type="text"
+                            id="company"
+                            name="company"
+                            value={formData.company}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-highlight focus:border-transparent transition-all"
+                            placeholder="Your startup name"
+                          />
+                        </div>
+                        
+                        <div>
+                          <label htmlFor="website" className="block text-sm font-medium text-foreground mb-2">
+                            Current Website
+                          </label>
+                          <input
+                            type="url"
+                            id="website"
+                            name="website"
+                            value={formData.website}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-highlight focus:border-transparent transition-all"
+                            placeholder="https://yourwebsite.com"
+                          />
+                        </div>
                       </div>
                       
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                          Email Address *
+                        <label htmlFor="projectType" className="block text-sm font-medium text-foreground mb-2">
+                          What do you need help with? *
                         </label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          value={formData.email}
+                        <select
+                          id="projectType"
+                          name="projectType"
+                          value={formData.projectType}
                           onChange={handleInputChange}
                           required
-                          className="w-full px-4 py-3 rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-highlight focus:border-transparent transition-all"
-                          placeholder="your.email@example.com"
-                        />
+                          className="w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent-highlight focus:border-transparent transition-all"
+                        >
+                          <option value="website-audit">Website Audit & Strategy</option>
+                          <option value="mvp-development">MVP Development</option>
+                          <option value="conversion-optimization">Conversion Optimization</option>
+                          <option value="ecommerce-shopify">E-commerce (Shopify)</option>
+                          <option value="webflow-wordpress">Webflow/WordPress Site</option>
+                          <option value="other">Other</option>
+                        </select>
                       </div>
                       
                       <div>
                         <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                          Message *
+                          Tell me about your goals (optional)
                         </label>
                         <textarea
                           id="message"
                           name="message"
                           value={formData.message}
                           onChange={handleInputChange}
-                          required
-                          rows={4}
+                          rows={3}
                           className="w-full px-4 py-3 rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-highlight focus:border-transparent transition-all resize-none"
-                          placeholder="Tell me about your project, goals, and timeline..."
+                          placeholder="What are your main challenges? What's your timeline? Any specific goals?"
                         />
                       </div>
                       
@@ -154,10 +224,14 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                         variant="primary"
                         size="lg"
                         showArrow
-                        className="w-full"
+                        className="w-full text-lg py-4"
                       >
-                        Send Your Message
+                        Book My Free Strategy Call
                       </Button>
+                      
+                      <p className="text-xs text-muted-foreground text-center">
+                        No spam, no sales pitch. Just actionable insights to help your startup grow.
+                      </p>
                     </form>
                   </div>
                 ) : (
@@ -170,11 +244,19 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                       <CheckCircle className="w-8 h-8 text-green-600" />
                     </div>
                     <h3 className="text-2xl font-bold text-foreground mb-4">
-                      Thank you! Your submission has been received!
+                      You're all set! 🎉
                     </h3>
-                    <p className="text-muted-foreground">
-                      I&apos;ll get back to you within 24 hours to discuss your project.
+                    <p className="text-muted-foreground mb-6">
+                      I've received your request and will be in touch within 24 hours to schedule your free strategy call.
                     </p>
+                    <div className="bg-accent-highlight/5 rounded-xl p-4">
+                      <h4 className="font-semibold text-foreground mb-2">What happens next:</h4>
+                      <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• I'll review your website and prepare 3 specific insights</li>
+                        <li>• We'll schedule a 15-minute call at your convenience</li>
+                        <li>• You'll get immediate actionable advice to improve conversions</li>
+                      </ul>
+                    </div>
                   </motion.div>
                 )}
               </div>

@@ -1,11 +1,9 @@
 import type { Metadata } from 'next'
 import Navigation from '@/components/navigation'
 import HeroSection from '@/components/hero-section'
-import ClientCarousel from '@/components/client-carousel'
 import ServicesSection from '@/components/services-section'
 import SelectedWork from '@/components/selected-work'
 import ProcessSection from '@/components/process-section'
-import GallerySection from '@/components/gallery-section'
 import Testimonials from '@/components/testimonials'
 import AboutSection from '@/components/about-section'
 import StartupPainPoints from '@/components/startup-pain-points'
@@ -28,14 +26,12 @@ export default function Home() {
       <GSAPInteractions />
       <Navigation />
       <HeroSection />
-      <ClientCarousel />
+      <StartupPainPoints />
       <ServicesSection />
-      <SelectedWork />
       <ProcessSection />
-      <GallerySection />
+      <SelectedWork />
       <Testimonials />
       <AboutSection />
-      <StartupPainPoints />
       <ContactCTA />
       <Footer />
     </div>

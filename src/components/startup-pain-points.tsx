@@ -7,36 +7,36 @@ import { Button } from "@/components/ui/button";
 const painPoints = [
   {
     icon: <DollarSign className="w-6 h-6" />,
-    title: "Burning Cash on Marketing",
-    description: "You're spending thousands on ads that drive traffic to a website that doesn't convert. Every click costs money, but visitors leave without buying.",
+    title: "You're Burning Cash on Ads",
+    description: "You're driving traffic, but visitors aren't converting. Every click is a cost, and without conversions, it's money down the drain.",
   },
   {
     icon: <Clock className="w-6 h-6" />,
-    title: "Running Out of Time",
-    description: "Your runway is shrinking while you're stuck with a website that takes weeks to update. You need to move fast, but your current setup is holding you back.",
+    title: "You Can't Move Fast Enough",
+    description: "The market changes, but updating your site is a slow, painful process. By the time you make a change, the opportunity is gone.",
   },
   {
     icon: <Users className="w-6 h-6" />,
-    title: "Losing to Competitors",
-    description: "While you're dealing with a clunky website, competitors with better online presence are capturing your market share and potential customers.",
+    title: "You're Losing to Competitors",
+    description: "Potential customers visit, get confused, and leave. You know you have a better product, but their website tells a better story.",
   },
 ];
 
 const solutions = [
   {
     icon: <Target className="w-6 h-6" />,
-    title: "Conversion-Focused Development",
-    description: "Every element optimized for one goal: turning visitors into customers. No more pretty websites that don't generate revenue.",
+    title: "Conversion-First Development",
+    description: "We start with your business goals and work backward. Every line of code, design choice, and user flow is obsessively optimized to turn a visitor into a paying customer.",
   },
   {
     icon: <TrendingDown className="w-6 h-6" />,
-    title: "Rapid Deployment & Iteration",
-    description: "Launch in weeks, not months. Built for speed with easy content management so you can adapt quickly to market feedback.",
+    title: "Launch & Iterate in Weeks, Not Months",
+    description: "Speed is your greatest asset. We'll get your high-performing site live quickly, then use real data to make it even better. No more being held hostage by slow development cycles.",
   },
   {
     icon: <DollarSign className="w-6 h-6" />,
-    title: "ROI-Driven Design",
-    description: "Every design decision backed by conversion data. Focus on features that directly impact your bottom line and growth metrics.",
+    title: "A Tech Partner Who Gets It",
+    description: "I speak founder, not just code. Think of me as the technical co-founder you can call on to translate your vision into a digital experience that investors and customers will love.",
   },
 ];
 
@@ -71,14 +71,14 @@ export default function StartupPainPoints() {
           </motion.div>
           
           <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-foreground">
-            Your Website Is
+            Is Your Website a Growth Engine
             <br />
-            <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">Killing Your Startup</span>
+            <span className="gradient-text">or a Glorified Business Card?</span>
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-12">
-            Every day your website fails to convert is another day closer to running out of runway. 
-            While you&apos;re focused on product development, your online presence is hemorrhaging potential customers and revenue.
+            Let&apos;s be honest. While you&apos;re hustling to build your product and talk to customers, your website is probably just... sitting there. 
+            It looks professional, but it isn&apos;t moving the needle on the metrics that matter.
           </p>
         </motion.div>
 
@@ -111,16 +111,16 @@ export default function StartupPainPoints() {
           className="text-center mb-20 py-16 px-8 bg-gradient-to-r from-red-500/5 to-orange-500/5 rounded-3xl border border-red-200/10"
         >
           <h3 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
-            The Clock Is <span className="text-red-500">Ticking</span>
+            Every Day You Wait Is Another Day of <span className="text-accent-highlight">Lost Revenue</span>
           </h3>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
-            <strong>Every week you delay is market share lost forever.</strong> Your competitors are moving fast, 
-            capturing customers with polished websites while you&apos;re stuck with a site that looks like it was built in 2015. 
-            Investors notice. Customers notice. Your team notices.
+            <strong>Your competitors are improving their websites every day.</strong> While they&apos;re optimizing for conversions 
+            and user experience, you&apos;re stuck with a site that doesn&apos;t reflect your startup&apos;s potential. 
+            Your customers deserve better, and so do you.
           </p>
           <p className="text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            <strong>You have 18 months of runway left.</strong> How many of those months will you waste 
-            with a website that&apos;s actively working against your growth?
+            <strong>Every day you wait is another day of lost revenue and missed opportunities.</strong> The good news? 
+            This is fixable.
           </p>
         </motion.div>
 
@@ -133,11 +133,11 @@ export default function StartupPainPoints() {
           className="text-center mb-16"
         >
           <h3 className="text-3xl lg:text-4xl font-bold mb-6 text-foreground">
-            The <span className="gradient-text">Growth-Focused</span> Solution
+            The Growth-Focused Website: <span className="gradient-text">Your Unfair Advantage</span>
           </h3>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Professional, premium websites engineered from the ground up for user experience and conversion, 
-            turning visitors into customers. Built for startups that need to move fast and grow faster.
+            I don&apos;t just build websites; I build strategic assets designed for one purpose: to grow your startup. 
+            This is a partnership where we build a platform that works for you, not against you.
           </p>
         </motion.div>
 
@@ -184,13 +184,12 @@ export default function StartupPainPoints() {
             </div>
           </div>
           
-          <h4 className="text-2xl font-bold mb-4 text-foreground">
-            Stop Bleeding Money. Start Growing.
-          </h4>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Get a website that works as hard as you do. Built for conversion, optimized for growth, 
-            and designed to help you reach your next funding milestone.
-          </p>
+                         <h4 className="text-2xl font-bold mb-4 text-foreground">
+                 Ready to Turn Your Website Into a Growth Engine?
+               </h4>
+               <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
+                 When we work together, you can get back to what you do best—building your business—knowing your website is finally doing its job.
+               </p>
           
           <Button
             onClick={scrollToContact}
@@ -199,7 +198,7 @@ export default function StartupPainPoints() {
             showArrow
             className="text-lg px-8 py-4 bg-accent-highlight hover:bg-accent-highlight/90"
           >
-            Save My Startup
+            Get Free Website Audit
           </Button>
         </motion.div>
       </div>

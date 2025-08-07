@@ -7,39 +7,39 @@ import { Button } from "@/components/ui/button";
 const services = [
   {
     icon: <Code className="w-8 h-8" />,
-    title: "Web Development",
-    description: "Custom web applications built with modern technologies like React, Next.js, and Node.js. Focus on performance, scalability, and user experience.",
-    features: ["React & Next.js", "TypeScript", "API Integration", "Performance Optimization"],
+    title: "The MVP Launchpad",
+    description: "Let's get your idea into the market, fast. I build lean, scalable, and conversion-focused MVPs using React, Next.js, and Node.js that are designed to attract your first users and validate your concept.",
+    features: ["MVP Development", "React & Next.js", "API Integration", "Scalable Architecture"],
   },
   {
     icon: <Palette className="w-8 h-8" />,
-    title: "Web Design",
-    description: "Beautiful, responsive designs that capture your brand's essence and create memorable user experiences across all devices.",
-    features: ["UI/UX Design", "Brand Identity", "Responsive Design", "User Research"],
+    title: "The Conversion Engine (Webflow & WordPress)",
+    description: "Need a powerful marketing site that your team can actually use? I build beautiful, high-performing websites on Webflow and WordPress that are easy to manage and optimized for SEO and lead generation.",
+    features: ["Custom Development", "Mobile-First Design", "CMS Integration", "Conversion Optimization"],
   },
   {
     icon: <ShoppingCart className="w-8 h-8" />,
-    title: "E-Commerce Development",
-    description: "Complete e-commerce solutions with secure payment processing, inventory management, and seamless shopping experiences.",
-    features: ["Payment Integration", "Inventory Management", "Shopping Cart", "Order Processing"],
+    title: "The E-commerce Accelerator (Shopify)",
+    description: "Ready to sell? I create Shopify experiences that are engineered to maximize sales, from custom themes and payment integrations to fine-tuned conversion funnels.",
+    features: ["Product Catalog", "Custom Themes", "Payment Integration", "Conversion Funnels"],
   },
   {
     icon: <Search className="w-8 h-8" />,
-    title: "SEO Optimization",
-    description: "Search engine optimization to improve your website's visibility and help potential customers find your business online.",
-    features: ["Technical SEO", "Content Strategy", "Local SEO", "Analytics"],
+    title: "Startup SEO & Growth",
+    description: "SEO strategies that get your startup discovered by the right audience. Data-driven content and technical optimization for sustainable growth.",
+    features: ["Startup SEO", "Content Strategy", "Growth Analytics", "Competitive Analysis"],
   },
   {
     icon: <Zap className="w-8 h-8" />,
-    title: "Performance Optimization",
-    description: "Fast-loading websites that provide excellent user experience and help improve your search engine rankings.",
-    features: ["Core Web Vitals", "Image Optimization", "Caching", "CDN Setup"],
+    title: "Performance & Speed",
+    description: "Lightning-fast websites that convert better and rank higher. Core Web Vitals optimization for better user experience and search rankings.",
+    features: ["Core Web Vitals", "Speed Optimization", "Mobile Performance", "Conversion Impact"],
   },
   {
     icon: <Users className="w-8 h-8" />,
-    title: "User Experience Design",
-    description: "Intuitive and engaging user interfaces that guide visitors through your website and encourage them to take action.",
-    features: ["User Research", "Wireframing", "Prototyping", "Usability Testing"],
+    title: "User Experience Strategy",
+    description: "UX design that reduces friction and increases conversions. User research, prototyping, and testing focused on business outcomes.",
+    features: ["User Research", "Conversion UX", "Usability Testing", "Growth Metrics"],
   },
 ];
 
@@ -62,18 +62,18 @@ export default function ServicesSection() {
             className="inline-flex items-center gap-2 px-4 py-2 bg-accent-highlight/10 text-accent-highlight rounded-full text-sm font-medium mb-6"
           >
             <Globe className="w-4 h-4" />
-            What I Offer
+            Your Growth Engine
           </motion.div>
           
           <h2 className="text-4xl lg:text-6xl font-bold mb-6 text-foreground">
-            Design, Development, and SEO
+            From MVP to a
             <br />
-            <span className="gradient-text">All-in-one.</span>
+            <span className="gradient-text">Revenue-Generating Machine</span>
           </h2>
           
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Comprehensive web development services tailored to your business needs. 
-            From concept to deployment, I deliver high-quality solutions that drive results.
+            Whether you&apos;re launching your first product or scaling to your next milestone, 
+            I provide the technical firepower you need to win.
           </p>
         </motion.div>
 
