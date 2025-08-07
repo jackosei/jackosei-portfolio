@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Linkedin, Github, Mail, Award, Users, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Linkedin, Github, Mail, Users,  } from "lucide-react";
+
 
 export default function AboutSection() {
   return (
@@ -19,7 +19,7 @@ export default function AboutSection() {
           >
             <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600"
+                src="/images/jack-profile-image.webp"
                 alt="Jack Osei - Professional workspace"
                 fill
                 className="object-cover"

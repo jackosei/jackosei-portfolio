@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { heroImage, heroImageAlt } from "@/lib/constants";
@@ -94,28 +94,32 @@ export default function HeroSection() {
         </motion.div>
         
         <motion.div
-          className="animate-fade-in order-first lg:order-last"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          className="order-first lg:order-last relative mt-8 lg:mt-0"
+          initial={{ opacity: 0, scale: 0.9, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 1, 0.5, 1] }}
         >
-          <div className="relative">
-            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg mx-auto lg:max-w-none">
+            <div className="absolute inset-0 bg-gradient-to-br from-accent-highlight/20 to-primary/20 rounded-full blur-3xl transform -translate-x-10 translate-y-10"></div>
+            <div className="relative w-full h-auto aspect-[4/5] max-h-[60vh]">
               <Image
                 src={heroImage}
                 alt={heroImageAlt}
                 fill
-                className="object-cover"
+                className="object-contain object-bottom drop-shadow-2xl"
                 priority
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 500px"
               />
-              {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent"></div>
             </div>
-            
-            {/* Floating elements */}
-            <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-16 h-16 sm:w-24 sm:h-24 bg-accent-highlight/10 rounded-full blur-xl"></div>
-            <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-20 h-20 sm:w-32 sm:h-32 bg-accent-highlight/10 rounded-full blur-xl"></div>
+            <motion.div 
+              className="mt-4 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+            >
+              <p className="font-bold text-lg text-foreground">Jack Osei</p>
+              <p className="text-sm text-muted-foreground">The Founder&apos;s Tech Friend</p>
+            </motion.div>
           </div>
         </motion.div>
       </div>
