@@ -2,13 +2,17 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 import ThemeSwitcher from "./theme-switcher";
+import { Button } from "@/components/ui/button";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,7 +63,6 @@ export default function Navigation() {
     { name: "Services", href: "#services", id: "services" },
     { name: "Work", href: "#work", id: "work" },
     { name: "About", href: "#about", id: "about" },
-    { name: "Contact", href: "#contact", id: "contact" },
   ];
 
   return (
@@ -79,9 +82,15 @@ export default function Navigation() {
             transition={{ delay: 0.2 }}
             className="flex items-center gap-2"
           >
-            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-accent-highlight rounded-lg flex items-center justify-center">
-              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-accent-highlight-foreground" />
-            </div>
+                         <div className="w-6 h-6 sm:w-8 sm:h-8 relative">
+               <Image
+                 src={theme === "dark" ? "/images/JKO Light.svg" : "/images/JKO Dark.svg"}
+                 alt="Jack Osei Logo"
+                 fill
+                 className="object-contain"
+                 sizes="(max-width: 640px) 24px, 32px"
+               />
+             </div>
             <span className="text-lg sm:text-xl font-bold text-foreground">Jack Osei</span>
           </motion.div>
 
@@ -108,9 +117,23 @@ export default function Navigation() {
                   activeSection === item.id ? "w-full" : "w-0 group-hover:w-full"
                 }`}></span>
               </motion.a>
-            ))}
-            <ThemeSwitcher />
-          </motion.div>
+                         ))}
+                           <Button
+                variant="primary"
+                size="sm"
+                className="ml-4"
+                showArrow
+                onClick={() => {
+                  const element = document.getElementById("contact");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
+                Contact
+              </Button>
+             <ThemeSwitcher />
+           </motion.div>
 
           {/* Mobile Menu Button */}
           <motion.div
@@ -140,25 +163,42 @@ export default function Navigation() {
               transition={{ duration: 0.3 }}
               className="md:hidden overflow-hidden mobile-menu-container"
             >
-              <div className="py-4 sm:py-6 border-t border-border/50 space-y-2 bg-background/95 backdrop-blur-md">
-                {navItems.map((item, index) => (
-                  <motion.a
-                    key={item.name}
-                    href={item.href}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    onClick={() => setIsOpen(false)}
-                    className={`block py-3 px-4 rounded-lg transition-colors font-medium touch-manipulation ${
-                      activeSection === item.id 
-                        ? "text-accent-highlight bg-accent-highlight/10" 
-                        : "text-foreground hover:text-accent-highlight hover:bg-secondary/50"
-                    }`}
-                  >
-                    {item.name}
-                  </motion.a>
-                ))}
-              </div>
+                             <div className="py-4 sm:py-6 border-t border-border/50 space-y-2 bg-background/95 backdrop-blur-md">
+                 {navItems.map((item, index) => (
+                   <motion.a
+                     key={item.name}
+                     href={item.href}
+                     initial={{ opacity: 0, x: -20 }}
+                     animate={{ opacity: 1, x: 0 }}
+                     transition={{ delay: index * 0.1 }}
+                     onClick={() => setIsOpen(false)}
+                     className={`block py-3 px-4 rounded-lg transition-colors font-medium touch-manipulation ${
+                       activeSection === item.id 
+                         ? "text-accent-highlight bg-accent-highlight/10" 
+                         : "text-foreground hover:text-accent-highlight hover:bg-secondary/50"
+                     }`}
+                   >
+                     {item.name}
+                   </motion.a>
+                 ))}
+                 <div className="pt-2">
+                                       <Button
+                      variant="primary"
+                      size="sm"
+                      className="w-full"
+                      showArrow
+                      onClick={() => {
+                        setIsOpen(false);
+                        const element = document.getElementById("contact");
+                        if (element) {
+                          element.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
+                    >
+                      Get Started
+                    </Button>
+                 </div>
+               </div>
             </motion.div>
           )}
         </AnimatePresence>

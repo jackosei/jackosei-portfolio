@@ -1,9 +1,13 @@
 "use client"
 
 import { motion } from "framer-motion";
-import { Linkedin, Github, Mail, Heart, Sparkles, Phone, MapPin } from "lucide-react";
+import { Linkedin, Github, Mail, Heart, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export default function Footer() {
+  const { theme } = useTheme();
+  
   return (
     <footer className="bg-secondary/20 border-t">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
@@ -16,12 +20,18 @@ export default function Footer() {
             viewport={{ once: true }}
             className="sm:col-span-2 lg:col-span-1"
           >
-            <div className="flex items-center gap-3 mb-4 sm:mb-6">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary rounded-lg flex items-center justify-center">
-                <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground" />
-              </div>
-              <span className="text-xl sm:text-2xl font-bold text-foreground">Jack Osei</span>
-            </div>
+                         <div className="flex items-center gap-3 mb-4 sm:mb-6">
+               <div className="w-8 h-8 sm:w-10 sm:h-10 relative">
+                 <Image
+                   src={theme === "dark" ? "/images/JKO Light.svg" : "/images/JKO Dark.svg"}
+                   alt="Jack Osei Logo"
+                   fill
+                   className="object-contain"
+                   sizes="(max-width: 640px) 32px, 40px"
+                 />
+               </div>
+               <span className="text-xl sm:text-2xl font-bold text-foreground">Jack Osei</span>
+             </div>
             
             <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed max-w-md">
             Professional creative developer building websites and brands that act as growth engines, working as hard as their founders do to attract users and drive revenue.

@@ -36,6 +36,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  icons: {
+    icon: '/Favicon.ico',
+    shortcut: '/Favicon.ico',
+    apple: '/Favicon.ico',
+  },
   openGraph: {
     title: 'Jack Osei - Web Designer & Developer',
     description: 'Professional web designer and developer specializing in modern, responsive websites and web applications.',
@@ -43,7 +48,7 @@ export const metadata: Metadata = {
     siteName: 'Jack Osei Portfolio',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/images/JKO Dark.svg',
         width: 1200,
         height: 630,
         alt: 'Jack Osei - Web Designer & Developer',
@@ -56,7 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Jack Osei - Web Designer & Developer',
     description: 'Professional web designer and developer specializing in modern, responsive websites and web applications.',
-    images: ['/og-image.jpg'],
+    images: ['/images/JKO Dark.svg'],
   },
   robots: {
     index: true,
