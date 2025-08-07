@@ -40,9 +40,9 @@ export default function HeroSection() {
           </motion.div>
           
           <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6 text-foreground">
-            Your Website Should Work
-            <br />
-            <span className="gradient-text">as Hard as You Do</span>
+          Turn Your Website Into 
+     
+            <span className="gradient-text"> A Sales Engine</span>
           </h1>
           
           <p className="text-lg mb-8 max-w-lg text-muted-foreground leading-relaxed">
@@ -78,15 +78,15 @@ export default function HeroSection() {
             className="flex gap-8 mt-12 pt-8 border-t border-border/50"
           >
             <div>
-              <div className="text-2xl font-bold text-foreground">50+</div>
-              <div className="text-sm text-muted-foreground">Projects Completed</div>
+              <div className="text-2xl font-bold text-foreground">40+</div>
+              <div className="text-sm text-muted-foreground">Projects Led</div>
             </div>
             <div>
               <div className="text-2xl font-bold text-foreground">98%</div>
               <div className="text-sm text-muted-foreground">Client Satisfaction</div>
             </div>
             <div>
-              <div className="text-2xl font-bold text-foreground">5+</div>
+              <div className="text-2xl font-bold text-foreground">10+</div>
               <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
           </motion.div>
