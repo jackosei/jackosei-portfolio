@@ -1,7 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion";
-import { Rocket, Search, Code, Zap, Users, Target } from "lucide-react";
+import { Rocket, Search, Code, Zap } from "lucide-react";
 import AnimateIn from "@/components/AnimateIn";
 
 const processSteps = [

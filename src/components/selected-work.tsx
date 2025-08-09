@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion";
 import { Star, ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 import AnimateIn from "@/components/AnimateIn";

@@ -1,7 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion";
-import { Send, Mail, Clock, Target, Zap } from "lucide-react";
+import { Send, Clock, Target, Zap } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ContactModal from "./contact-modal";

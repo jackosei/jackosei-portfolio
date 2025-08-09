@@ -1,7 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion";
-import { Code, Palette, ShoppingCart, Search, Zap, Users, Globe, Shield } from "lucide-react";
+import { Code, Palette, ShoppingCart, Search, Zap, Users, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimateIn from "@/components/AnimateIn";
 

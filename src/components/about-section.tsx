@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion";
+
 import Image from "next/image";
 import { Linkedin, Github, Mail, Users,  } from "lucide-react";
 import AnimateIn from "@/components/AnimateIn";
