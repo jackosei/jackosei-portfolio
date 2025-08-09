@@ -10,6 +10,7 @@ import {
   DollarSign,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AnimateIn from "@/components/AnimateIn";
 
 const painPoints = [
   {
@@ -89,23 +90,13 @@ export default function StartupPainPoints() {
     <section className="section-padding bg-gradient-to-br from-background via-background to-secondary/5 section-divider ">
       <div className="max-w-7xl mx-auto ">
         {/* Problem Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-20"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-red-500/10 text-red-500 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6"
-          >
-            <AlertTriangle className="w-3 h-3 sm:w-4 sm:h-4" />
-            For Startups & Founders
-          </motion.div>
+        <AnimateIn className="text-center mb-12 sm:mb-20">
+          <AnimateIn delay={0.2}>
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-red-500/10 text-red-500 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <AlertTriangle className="w-3 h-3 sm:w-4 sm:h-4" />
+              For Startups & Founders
+            </div>
+          </AnimateIn>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-foreground">
             Is Your Website a Growth Engine
@@ -119,17 +110,14 @@ export default function StartupPainPoints() {
             sitting there. It looks professional, but it isn&apos;t moving the
             needle on the metrics that matter.
           </p>
-        </motion.div>
+        </AnimateIn>
 
         {/* Pain Points Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {painPoints.map((point, index) => (
-            <motion.div
+            <AnimateIn
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              delay={index * 0.1}
               className="bg-background p-6 sm:p-8 rounded-xl border hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-start gap-4">
@@ -145,19 +133,13 @@ export default function StartupPainPoints() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </AnimateIn>
           ))}
         </div>
 
         {/* Solutions Section */}
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="w-full bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 rounded-2xl py-12 sm:py-16 mb-12 sm:mb-16"
-        >
+        <AnimateIn delay={0.6} className="w-full bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 rounded-2xl py-12 sm:py-16 mb-12 sm:mb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center">
               <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-foreground">
@@ -177,17 +159,14 @@ export default function StartupPainPoints() {
               </p>
             </div>
           </div>
-        </motion.div>
+        </AnimateIn>
 
         {/* Solutions Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {solutions.map((solution, index) => (
-            <motion.div
+            <AnimateIn
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              delay={index * 0.1}
               className="card-hover group p-6 sm:p-8"
             >
               <div className="text-accent-highlight mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -201,18 +180,12 @@ export default function StartupPainPoints() {
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 {solution.description}
               </p>
-            </motion.div>
+            </AnimateIn>
           ))}
         </div>
 
         {/* Solution Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
+        <AnimateIn delay={0.4} className="text-center">
           <div className="bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 rounded-2xl p-8 sm:p-12 max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-2 mb-6">
               <CheckCircle className="w-6 h-6 text-accent-highlight" />
@@ -248,7 +221,7 @@ export default function StartupPainPoints() {
               Get Your Free Website Audit
             </Button>
           </div>
-        </motion.div>
+        </AnimateIn>
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import { Send, Mail, Clock, Target, Zap } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ContactModal from "./contact-modal";
+import AnimateIn from "@/components/AnimateIn";
 
 interface ContactCTAProps {
   title?: string;
@@ -80,23 +81,13 @@ export default function ContactCTA({
     <>
       <section id="contact" className="section-padding bg-background section-divider">
         <div className="max-w-7xl mx-auto ">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-accent-highlight/10 text-accent-highlight rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6"
-            >
-              <Send className="w-3 h-3 sm:w-4 sm:h-4" />
-              {subtitle}
-            </motion.div>
+          <AnimateIn className="text-center">
+            <AnimateIn delay={0.2}>
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-accent-highlight/10 text-accent-highlight rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+                <Send className="w-3 h-3 sm:w-4 sm:h-4" />
+                {subtitle}
+              </div>
+            </AnimateIn>
             
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-foreground">
               {title}
@@ -113,13 +104,7 @@ export default function ContactCTA({
             </p>
 
             {!showInlineForm ? (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="space-y-6"
-              >
+              <AnimateIn delay={0.4} className="space-y-6">
                 {/* Value Proposition Cards */}
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
                   {valueProps.map((prop, index) => (
@@ -162,14 +147,9 @@ export default function ContactCTA({
                     {secondaryButtonText}
                   </Button>
                 </div>
-              </motion.div>
+              </AnimateIn>
             ) : (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="max-w-md mx-auto"
-              >
+              <AnimateIn className="max-w-md mx-auto">
                 <form onSubmit={handleInlineSubmit} className="space-y-4">
                   <div>
                     <input
@@ -234,9 +214,9 @@ export default function ContactCTA({
                     </Button>
                   </div>
                 </form>
-              </motion.div>
+              </AnimateIn>
             )}
-          </motion.div>
+          </AnimateIn>
         </div>
       </section>
 

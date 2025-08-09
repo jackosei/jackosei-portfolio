@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Linkedin, Github, Mail, Users,  } from "lucide-react";
+import AnimateIn from "@/components/AnimateIn";
 
 
 export default function AboutSection() {
@@ -10,13 +11,7 @@ export default function AboutSection() {
     <section id="about" className="section-padding bg-background section-divider">
       <div className="max-w-7xl mx-auto ">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center order-2 lg:order-1"
-          >
+          <AnimateIn className="text-center order-2 lg:order-1">
             <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/jack-profile-image.webp"
@@ -29,25 +24,15 @@ export default function AboutSection() {
             </div>
             
             
-          </motion.div>
+          </AnimateIn>
           
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="md:text-left text-center order-1 lg:order-2"
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-accent-highlight/10 text-accent-highlight rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6"
-            >
-              <Users className="w-3 h-3 sm:w-4 sm:h-4" />
-              About Me
-            </motion.div>
+          <AnimateIn delay={0.2} className="md:text-left text-center order-1 lg:order-2">
+            <AnimateIn delay={0.4}>
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-accent-highlight/10 text-accent-highlight rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+                <Users className="w-3 h-3 sm:w-4 sm:h-4" />
+                About Me
+              </div>
+            </AnimateIn>
             
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-foreground">
               Your Tech Friend
@@ -106,7 +91,7 @@ export default function AboutSection() {
             >
               Connect on LinkedIn
             </Button> */}
-          </motion.div>
+          </AnimateIn>
         </div>
       </div>
     </section>

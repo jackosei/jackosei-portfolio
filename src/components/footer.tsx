@@ -5,6 +5,7 @@ import { Linkedin, Github, Mail, Heart, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import AnimateIn from "@/components/AnimateIn";
 
 export default function Footer() {
   const { theme } = useTheme();
@@ -19,13 +20,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
           {/* Brand Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="sm:col-span-2 lg:col-span-1"
-          >
+          <AnimateIn className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4 sm:mb-6">
               <div className="w-8 h-8 sm:w-10 sm:h-10 relative">
                 {mounted && (
@@ -77,15 +72,10 @@ export default function Footer() {
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             </div>
-          </motion.div>
+          </AnimateIn>
 
           {/* Services Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
+          <AnimateIn delay={0.1}>
             <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-foreground">
               Services
             </h4>
@@ -117,15 +107,10 @@ export default function Footer() {
                 <a href="/api-integration">API Integration</a>
               </li>
             </ul>
-          </motion.div>
+          </AnimateIn>
 
           {/* Contact Details Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
+          <AnimateIn delay={0.2}>
             <h4 className="font-bold text-base sm:text-lg mb-4 sm:mb-6 text-foreground">
               Contact
             </h4>
@@ -161,17 +146,11 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </AnimateIn>
         </div>
 
         {/* Bottom Section */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="border-t mt-8 sm:mt-12 pt-6 sm:pt-8"
-        >
+        <AnimateIn delay={0.3} className="border-t mt-8 sm:mt-12 pt-6 sm:pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="text-center sm:text-left">
               <p className="text-muted-foreground text-xs sm:text-sm">
@@ -203,7 +182,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-        </motion.div>
+        </AnimateIn>
       </div>
     </footer>
   );

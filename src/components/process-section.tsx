@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Rocket, Search, Code, Zap, Users, Target } from "lucide-react";
+import AnimateIn from "@/components/AnimateIn";
 
 const processSteps = [
   {
@@ -28,23 +29,13 @@ export default function ProcessSection() {
   return (
     <section className="section-padding bg-background section-divider">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-accent-highlight/10 text-accent-highlight rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6"
-          >
-            <Rocket className="w-3 h-3 sm:w-4 sm:h-4" />
-            Process
-          </motion.div>
+        <AnimateIn className="text-center mb-12 sm:mb-16">
+          <AnimateIn delay={0.2}>
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-accent-highlight/10 text-accent-highlight rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <Rocket className="w-3 h-3 sm:w-4 sm:h-4" />
+              Process
+            </div>
+          </AnimateIn>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-foreground">
             From Idea to
             <br />
@@ -55,16 +46,13 @@ export default function ProcessSection() {
             A proven process that gets your website live quickly and generating revenue fast. 
             No endless revisions or technical delays—just results.
           </p>
-        </motion.div>
+        </AnimateIn>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {processSteps.map((step, index) => (
-            <motion.div
+            <AnimateIn
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              delay={index * 0.1}
               className="card-hover group p-6 sm:p-8"
             >
               <div className="text-accent-highlight mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -89,7 +77,7 @@ export default function ProcessSection() {
                   </span>
                 </div>
               </div>
-            </motion.div>
+            </AnimateIn>
           ))}
         </div>
       </div>

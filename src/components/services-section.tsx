@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Code, Palette, ShoppingCart, Search, Zap, Users, Globe, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AnimateIn from "@/components/AnimateIn";
 
 const services = [
   {
@@ -47,23 +48,13 @@ export default function ServicesSection() {
   return (
     <section id="services" className="section-padding bg-background section-divider">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-20"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-accent-highlight/10 text-accent-highlight rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6"
-          >
-            <Globe className="w-3 h-3 sm:w-4 sm:h-4" />
-            Your Growth Engine
-          </motion.div>
+        <AnimateIn className="text-center mb-12 sm:mb-20">
+          <AnimateIn delay={0.2}>
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-accent-highlight/10 text-accent-highlight rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <Globe className="w-3 h-3 sm:w-4 sm:h-4" />
+              Your Growth Engine
+            </div>
+          </AnimateIn>
           
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-foreground">
             From MVP to a
@@ -75,16 +66,13 @@ export default function ServicesSection() {
             Whether you&apos;re launching your first product or scaling to your next milestone, 
             I provide the technical firepower you need to win.
           </p>
-        </motion.div>
+        </AnimateIn>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
-            <motion.div
+            <AnimateIn
               key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              delay={index * 0.1}
               className="card-hover group p-6 sm:p-8"
             >
               <div className="text-accent-highlight mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -107,18 +95,12 @@ export default function ServicesSection() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </AnimateIn>
           ))}
         </div>
         
         {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-12 sm:mt-20"
-        >
+        <AnimateIn delay={0.4} className="text-center mt-12 sm:mt-20">
           <div className="bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto">
             <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-foreground">
               Ready to Start Your Project?
@@ -145,7 +127,7 @@ export default function ServicesSection() {
               </Button>
             </div>
           </div>
-        </motion.div>
+        </AnimateIn>
       </div>
     </section>
   );
