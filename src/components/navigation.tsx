@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useTheme } from "next-themes";
 import ThemeSwitcher from "./theme-switcher";
 import { Button } from "@/components/ui/button";
@@ -85,18 +86,19 @@ export default function Navigation() {
             transition={{ delay: 0.2 }}
             className="flex items-center gap-2"
           >
-                         <div className="w-10 h-10 sm:w-12 sm:h-12 relative">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 relative">
               {mounted && (
-             <a href="/" className="cursor-pointer" aria-label="Home"> <Image
-                src={theme === "dark" ? "/images/JKO Light.svg" : "/images/JKO Dark.svg"}
-                alt="Jack Osei Logo"
-                fill
-                className="object-contain"
-                sizes="(max-width: 640px) 32px, 48px"
-              />
-              </a>
+                <Link href="/" className="cursor-pointer" aria-label="Home">
+                  <Image
+                    src={theme === "dark" ? "/images/JKO Light.svg" : "/images/JKO Dark.svg"}
+                    alt="Jack Osei Logo"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 640px) 32px, 48px"
+                  />
+                </Link>
               )}
-             </div>
+            </div>
           </motion.div>
 
           {/* Desktop Navigation */}

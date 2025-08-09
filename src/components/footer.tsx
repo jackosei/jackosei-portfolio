@@ -2,6 +2,7 @@
 
 import { Linkedin, Github, Mail, Heart, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import AnimateIn from "@/components/AnimateIn";
@@ -23,17 +24,19 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4 sm:mb-6">
               <div className="w-8 h-8 sm:w-10 sm:h-10 relative">
                 {mounted && (
-                  <a href="/" className="cursor-pointer" aria-label="Home"> <Image
-                    src={
-                      theme === "dark"
-                        ? "/images/JKO Light.svg"
-                        : "/images/JKO Dark.svg"
-                    }
-                    alt="Jack Osei Logo"
-                    fill
-                    className="object-contain"
-                    sizes="(max-width: 640px) 32px, 40px"
-                  /></a>
+                  <Link href="/" className="cursor-pointer" aria-label="Home">
+                    <Image
+                      src={
+                        theme === "dark"
+                          ? "/images/JKO Light.svg"
+                          : "/images/JKO Dark.svg"
+                      }
+                      alt="Jack Osei Logo"
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 640px) 32px, 40px"
+                    />
+                  </Link>
                 )}
               </div>
             </div>
