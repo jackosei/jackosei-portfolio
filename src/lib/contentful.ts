@@ -118,13 +118,6 @@ export async function getJournals(limit?: number): Promise<JournalEntry[]> {
       limit: limit || 100,
     });
     
-    // Debug logging to see the actual response structure
-    console.log('Contentful response structure:', {
-      hasItems: !!data.items,
-      itemsLength: data.items?.length,
-      responseKeys: Object.keys(data),
-      firstItem: data.items?.[0]
-    });
     
     // Ensure we have items and they're properly structured
     if (!data.items || !Array.isArray(data.items)) {
