@@ -19,9 +19,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        interax: "bg-gray-900 text-gray-100 hover:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300",
+        interax: "bg-gray-800 text-gray-100 hover:bg-gray-900 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300",
         // Primary button - main CTA with green accent
-        primary: "bg-gray-900 text-gray-100 hover:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group",
+        primary: "bg-gray-800 text-gray-100 hover:bg-gray-900 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group",
         // Secondary button - secondary CTA without accent
         secondary: "text-foreground hover:text-accent-highlight transition-all duration-300 !p-0 group",
         // Tertiary button - clean link style
