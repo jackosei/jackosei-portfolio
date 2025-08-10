@@ -47,16 +47,25 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "API Integration | Jack Osei",
+  title: "API Integration Services | Jack Osei",
   description:
-    "Professional API integration services for startups. Connect your tools and automate workflows to build a cohesive tech stack that works seamlessly together.",
+    "Professional API integration services for startups. Connect your tools and automate workflows to build a cohesive tech stack that works seamlessly together. Based in Dubai, UAE and serving Ghana and worldwide.",
   keywords:
-    "API integration, workflow automation, third-party services, data synchronization, custom API development, tech stack integration, webhook development",
+    "API integration, workflow automation, third-party services, data synchronization, custom API development, tech stack integration, webhook development, Dubai API developer, Ghana API developer, African API developer",
+  alternates: {
+    canonical: '/api-integration',
+  },
   openGraph: {
-    title: "API Integration | Jack Osei",
+    title: "API Integration Services | Jack Osei",
     description:
-      "Professional API integration services for startups. Connect your tools and automate workflows to build a cohesive tech stack.",
+      "Professional API integration services for startups. Connect your tools and automate workflows to build a cohesive tech stack. Based in Dubai, UAE and serving Ghana and worldwide.",
+    url: 'https://jackosei.com/api-integration',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "API Integration Services | Jack Osei",
+    description: "Professional API integration services for startups. Connect your tools and automate workflows to build a cohesive tech stack. Based in Dubai, UAE and serving Ghana and worldwide.",
   },
 };
 

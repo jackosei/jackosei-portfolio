@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     default: 'Jack Osei - Founder\'s Tech Friend & Web Developer',
     template: '%s | Jack Osei'
   },
-  description: 'As a founder\'s tech partner, I build conversion-focused websites that act as growth engines, attracting users and driving revenue for startups.',
-  keywords: ['startup web developer', 'founder tech partner', 'conversion-focused websites', 'React developer', 'Next.js developer', 'Webflow developer', 'Shopify developer'],
+  description: 'As a founder\'s tech partner, I build conversion-focused websites that act as growth engines, attracting users and driving revenue for startups. Based in Dubai, UAE and serving Ghana and worldwide.',
+  keywords: ['startup web developer', 'founder tech partner', 'conversion-focused websites', 'React developer', 'Next.js developer', 'Webflow developer', 'Shopify developer', 'Dubai web developer', 'Ghana web developer', 'African web developer'],
   authors: [{ name: 'Jack Osei' }],
   creator: 'Jack Osei',
   publisher: 'Jack Osei',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Jack Osei - Founder\'s Tech Friend & Web Developer',
-    description: 'I build conversion-focused websites for founders that turn visitors into customers.',
+    description: 'I build conversion-focused websites for founders that turn visitors into customers. Based in Dubai, UAE and serving Ghana and worldwide.',
     url: 'https://jackosei.com',
     siteName: 'Jack Osei Portfolio',
     images: [
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Jack Osei - Founder\'s Tech Friend & Web Developer',
-    description: 'I build conversion-focused websites for founders that turn visitors into customers.',
+    description: 'I build conversion-focused websites for founders that turn visitors into customers. Based in Dubai, UAE and serving Ghana and worldwide.',
     images: ['/og-image.png'],
   },
   robots: {

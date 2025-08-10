@@ -7,10 +7,24 @@ import Footer from "@/components/footer";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Journals",
+  title: "Web Development Journals & Insights | Jack Osei",
   description:
-    "Insights, notes, and lessons from building conversion-focused web experiences.",
-  alternates: { canonical: "/journals" },
+    "Insights, notes, and lessons from building conversion-focused web experiences. Learn from real projects, technical challenges, and startup growth strategies.",
+  keywords: ['web development blog', 'startup insights', 'technical articles', 'web development tips', 'conversion optimization', 'startup growth'],
+  alternates: { 
+    canonical: "/journals" 
+  },
+  openGraph: {
+    title: "Web Development Journals & Insights | Jack Osei",
+    description: "Insights, notes, and lessons from building conversion-focused web experiences. Learn from real projects, technical challenges, and startup growth strategies.",
+    url: 'https://jackosei.com/journals',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Web Development Journals & Insights | Jack Osei",
+    description: "Insights, notes, and lessons from building conversion-focused web experiences. Learn from real projects, technical challenges, and startup growth strategies.",
+  },
 };
 
 export default async function JournalsPage() {

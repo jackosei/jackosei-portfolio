@@ -57,16 +57,25 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Analytics & Insights | Jack Osei",
+  title: "Analytics & Insights Services | Jack Osei",
   description:
-    "Professional analytics and insights services for startups. Transform raw data into actionable insights to drive growth and make informed business decisions.",
+    "Professional analytics and insights services for startups. Transform raw data into actionable insights to drive growth and make informed business decisions. Based in Dubai, UAE and serving Ghana and worldwide.",
   keywords:
-    "analytics, data insights, conversion tracking, growth dashboards, A/B testing, key metrics, funnel analysis, data strategy, business intelligence",
+    "analytics, data insights, conversion tracking, growth dashboards, A/B testing, key metrics, funnel analysis, data strategy, business intelligence, Dubai analytics consultant, Ghana analytics consultant, African analytics consultant",
+  alternates: {
+    canonical: '/analytics-insights',
+  },
   openGraph: {
-    title: "Analytics & Insights | Jack Osei",
+    title: "Analytics & Insights Services | Jack Osei",
     description:
-      "Professional analytics and insights services for startups. Transform raw data into actionable insights to drive growth.",
+      "Professional analytics and insights services for startups. Transform raw data into actionable insights to drive growth. Based in Dubai, UAE and serving Ghana and worldwide.",
+    url: 'https://jackosei.com/analytics-insights',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Analytics & Insights Services | Jack Osei",
+    description: "Professional analytics and insights services for startups. Transform raw data into actionable insights to drive growth. Based in Dubai, UAE and serving Ghana and worldwide.",
   },
 };
 

@@ -40,16 +40,25 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "UI/UX Design | Jack Osei",
+  title: "UI/UX Design Services | Jack Osei",
   description:
-    "Professional UI/UX design services for startups. Transform confusing user experiences into intuitive, conversion-focused designs that drive business results.",
+    "Professional UI/UX design services for startups. Transform confusing user experiences into intuitive, conversion-focused designs that drive business results. Based in Dubai, UAE and serving Ghana and worldwide.",
   keywords:
-    "UI design, UX design, user experience, user interface, conversion optimization, usability testing, wireframing, prototyping, user journey mapping",
+    "UI design, UX design, user experience, user interface, conversion optimization, usability testing, wireframing, prototyping, user journey mapping, Dubai UI/UX designer, Ghana UI/UX designer, African UI/UX designer",
+  alternates: {
+    canonical: '/ui-ux-design',
+  },
   openGraph: {
-    title: "UI/UX Design | Jack Osei",
+    title: "UI/UX Design Services | Jack Osei",
     description:
-      "Professional UI/UX design services for startups. Transform confusing user experiences into intuitive, conversion-focused designs.",
+      "Professional UI/UX design services for startups. Transform confusing user experiences into intuitive, conversion-focused designs. Based in Dubai, UAE and serving Ghana and worldwide.",
+    url: 'https://jackosei.com/ui-ux-design',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "UI/UX Design Services | Jack Osei",
+    description: "Professional UI/UX design services for startups. Transform confusing user experiences into intuitive, conversion-focused designs. Based in Dubai, UAE and serving Ghana and worldwide.",
   },
 };
 

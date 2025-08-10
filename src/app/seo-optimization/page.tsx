@@ -30,16 +30,25 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "SEO Optimization | Jack Osei",
+  title: "SEO Optimization Services | Jack Osei",
   description:
-    "Professional SEO optimization services for startups. Build sustainable organic growth through strategic keyword targeting, technical SEO, and content marketing.",
+    "Professional SEO optimization services for startups. Build sustainable organic growth through strategic keyword targeting, technical SEO, and content marketing. Based in Dubai, UAE and serving Ghana and worldwide.",
   keywords:
-    "SEO optimization, search engine optimization, startup SEO, organic growth, keyword strategy, technical SEO, content marketing, local SEO",
+    "SEO optimization, search engine optimization, startup SEO, organic growth, keyword strategy, technical SEO, content marketing, local SEO, Dubai SEO services, Ghana SEO services, African SEO services",
+  alternates: {
+    canonical: '/seo-optimization',
+  },
   openGraph: {
-    title: "SEO Optimization | Jack Osei",
+    title: "SEO Optimization Services | Jack Osei",
     description:
-      "Professional SEO optimization services for startups. Build sustainable organic growth through strategic keyword targeting and content marketing.",
+      "Professional SEO optimization services for startups. Build sustainable organic growth through strategic keyword targeting and content marketing. Based in Dubai, UAE and serving Ghana and worldwide.",
+    url: 'https://jackosei.com/seo-optimization',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "SEO Optimization Services | Jack Osei",
+    description: "Professional SEO optimization services for startups. Build sustainable organic growth through strategic keyword targeting and content marketing. Based in Dubai, UAE and serving Ghana and worldwide.",
   },
 };
 

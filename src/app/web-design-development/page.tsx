@@ -25,16 +25,25 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Web Design & Development | Jack Osei",
+  title: "Web Design & Development Services | Jack Osei",
   description:
-    "Professional web design and development services for startups. Build your digital foundation with custom, conversion-focused websites that establish credibility and drive growth.",
+    "Professional web design and development services for startups. Build your digital foundation with custom, conversion-focused websites that establish credibility and drive growth. Based in Dubai, UAE and serving Ghana and worldwide.",
   keywords:
-    "web design, web development, startup websites, custom websites, conversion-focused design, mobile-responsive, CMS, Next.js, Webflow, WordPress",
+    "web design, web development, startup websites, custom websites, conversion-focused design, mobile-responsive, CMS, Next.js, Webflow, WordPress, Dubai web developer, Ghana web developer, African web developer",
+  alternates: {
+    canonical: '/web-design-development',
+  },
   openGraph: {
-    title: "Web Design & Development | Jack Osei",
+    title: "Web Design & Development Services | Jack Osei",
     description:
-      "Professional web design and development services for startups. Build your digital foundation with custom, conversion-focused websites.",
+      "Professional web design and development services for startups. Build your digital foundation with custom, conversion-focused websites. Based in Dubai, UAE and serving Ghana and worldwide.",
+    url: 'https://jackosei.com/web-design-development',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Web Design & Development Services | Jack Osei",
+    description: "Professional web design and development services for startups. Build your digital foundation with custom, conversion-focused websites. Based in Dubai, UAE and serving Ghana and worldwide.",
   },
 };
 

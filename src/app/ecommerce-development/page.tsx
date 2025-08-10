@@ -33,16 +33,25 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "E-commerce Development | Jack Osei",
+  title: "E-commerce Development Services | Jack Osei",
   description:
-    "Professional e-commerce development services for startups. Build high-converting Shopify and WooCommerce stores that maximize sales and customer lifetime value.",
+    "Professional e-commerce development services for startups. Build high-converting Shopify and WooCommerce stores that maximize sales and customer lifetime value. Based in Dubai, UAE and serving Ghana and worldwide.",
   keywords:
-    "e-commerce development, Shopify development, WooCommerce development, online store, conversion optimization, payment integration, subscription models, customer loyalty",
+    "e-commerce development, Shopify development, WooCommerce development, online store, conversion optimization, payment integration, subscription models, customer loyalty, Dubai e-commerce developer, Ghana e-commerce developer, African e-commerce developer",
+  alternates: {
+    canonical: '/ecommerce-development',
+  },
   openGraph: {
-    title: "E-commerce Development | Jack Osei",
+    title: "E-commerce Development Services | Jack Osei",
     description:
-      "Professional e-commerce development services for startups. Build high-converting Shopify and WooCommerce stores that maximize sales.",
+      "Professional e-commerce development services for startups. Build high-converting Shopify and WooCommerce stores that maximize sales. Based in Dubai, UAE and serving Ghana and worldwide.",
+    url: 'https://jackosei.com/ecommerce-development',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "E-commerce Development Services | Jack Osei",
+    description: "Professional e-commerce development services for startups. Build high-converting Shopify and WooCommerce stores that maximize sales. Based in Dubai, UAE and serving Ghana and worldwide.",
   },
 };
 

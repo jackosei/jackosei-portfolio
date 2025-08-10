@@ -35,16 +35,25 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Performance & Speed Optimization | Jack Osei",
+  title: "Website Performance Optimization | Jack Osei",
   description:
-    "Professional website performance optimization services for startups. Transform slow websites into lightning-fast experiences that convert better and rank higher.",
+    "Professional website performance optimization services for startups. Transform slow websites into lightning-fast experiences that convert better and rank higher. Based in Dubai, UAE and serving Ghana and worldwide.",
   keywords:
-    "performance optimization, website speed, Core Web Vitals, page load speed, website optimization, LCP, FID, CLS, CDN, caching",
+    "performance optimization, website speed, Core Web Vitals, page load speed, website optimization, LCP, FID, CLS, CDN, caching, Dubai performance developer, Ghana performance developer, African performance developer",
+  alternates: {
+    canonical: '/performance-optimization',
+  },
   openGraph: {
-    title: "Performance & Speed Optimization | Jack Osei",
+    title: "Website Performance Optimization | Jack Osei",
     description:
-      "Professional website performance optimization services for startups. Transform slow websites into lightning-fast experiences.",
+      "Professional website performance optimization services for startups. Transform slow websites into lightning-fast experiences. Based in Dubai, UAE and serving Ghana and worldwide.",
+    url: 'https://jackosei.com/performance-optimization',
     type: "website",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Website Performance Optimization | Jack Osei",
+    description: "Professional website performance optimization services for startups. Transform slow websites into lightning-fast experiences. Based in Dubai, UAE and serving Ghana and worldwide.",
   },
 };
 
