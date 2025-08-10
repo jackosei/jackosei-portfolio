@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 import ThemeSwitcher from "./theme-switcher";
 import { Button } from "@/components/ui/button";
 
@@ -15,6 +16,7 @@ export default function Navigation() {
   const [activeSection, setActiveSection] = useState("home");
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     setMounted(true);
@@ -67,6 +69,7 @@ export default function Navigation() {
     { name: "Services", href: "#services", id: "services" },
     { name: "Work", href: "#work", id: "work" },
     { name: "About", href: "#about", id: "about" },
+    { name: "Journals", href: "/journals", id: "journals" },
   ];
 
   return (
@@ -108,23 +111,36 @@ export default function Navigation() {
             transition={{ delay: 0.3 }}
             className="hidden md:flex items-center space-x-8"
           >
-            {navItems.map((item, index) => (
-              <motion.a
-                key={item.name}
-                href={item.href}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + index * 0.1 }}
-                className={`relative text-foreground hover:text-accent-highlight transition-colors font-medium group ${
-                  activeSection === item.id ? "text-accent-highlight" : ""
-                }`}
-              >
-                {item.name}
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-accent-highlight transition-all duration-300 ${
-                  activeSection === item.id ? "w-full" : "w-0 group-hover:w-full"
-                }`}></span>
-              </motion.a>
-                         ))}
+            {navItems.map((item, index) => {
+              const isRoute = item.href.startsWith("/");
+              const isActive = isRoute ? pathname?.startsWith(item.href) : activeSection === item.id;
+              const className = `relative text-foreground hover:text-accent-highlight transition-colors font-medium group ${
+                isActive ? "text-accent-highlight" : ""
+              }`;
+              const underlineClass = `absolute -bottom-1 left-0 h-0.5 bg-accent-highlight transition-all duration-300 ${
+                isActive ? "w-full" : "w-0 group-hover:w-full"
+              }`;
+              return (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 + index * 0.1 }}
+                >
+                  {isRoute ? (
+                    <Link href={item.href} className={className}>
+                      {item.name}
+                      <span className={underlineClass}></span>
+                    </Link>
+                  ) : (
+                    <a href={item.href} className={className}>
+                      {item.name}
+                      <span className={underlineClass}></span>
+                    </a>
+                  )}
+                </motion.div>
+              );
+            })}
                            <Button
                 variant="primary"
                 size="sm"
@@ -171,23 +187,33 @@ export default function Navigation() {
               className="md:hidden overflow-hidden mobile-menu-container"
             >
                              <div className="py-4 sm:py-6 border-t border-border/50 space-y-2 bg-background/95 backdrop-blur-md">
-                 {navItems.map((item, index) => (
-                   <motion.a
-                     key={item.name}
-                     href={item.href}
-                     initial={{ opacity: 0, x: -20 }}
-                     animate={{ opacity: 1, x: 0 }}
-                     transition={{ delay: index * 0.1 }}
-                     onClick={() => setIsOpen(false)}
-                     className={`block py-3 px-4 rounded-lg transition-colors font-medium touch-manipulation ${
-                       activeSection === item.id 
-                         ? "text-accent-highlight bg-accent-highlight/10" 
-                         : "text-foreground hover:text-accent-highlight hover:bg-secondary/50"
-                     }`}
-                   >
-                     {item.name}
-                   </motion.a>
-                 ))}
+                 {navItems.map((item, index) => {
+                   const isRoute = item.href.startsWith("/");
+                   const isActive = isRoute ? pathname?.startsWith(item.href) : activeSection === item.id;
+                   const itemClass = `block py-3 px-4 rounded-lg transition-colors font-medium touch-manipulation ${
+                     isActive
+                       ? "text-accent-highlight bg-accent-highlight/10"
+                       : "text-foreground hover:text-accent-highlight hover:bg-secondary/50"
+                   }`;
+                   return (
+                     <motion.div
+                       key={item.name}
+                       initial={{ opacity: 0, x: -20 }}
+                       animate={{ opacity: 1, x: 0 }}
+                       transition={{ delay: index * 0.1 }}
+                     >
+                       {isRoute ? (
+                         <Link href={item.href} className={itemClass} onClick={() => setIsOpen(false)}>
+                           {item.name}
+                         </Link>
+                       ) : (
+                         <a href={item.href} className={itemClass} onClick={() => setIsOpen(false)}>
+                           {item.name}
+                         </a>
+                       )}
+                     </motion.div>
+                   );
+                 })}
                  <div className="pt-2">
                                        <Button
                       variant="primary"
