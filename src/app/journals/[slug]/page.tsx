@@ -99,6 +99,17 @@ export default async function JournalPage({ params }: { params: Promise<{ slug: 
           <div className="prose prose-lg sm:prose-xl max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-accent-highlight prose-a:no-underline hover:prose-a:underline">
             <RichText document={entry.fields.content} />
           </div>
+
+          {/* Call-to-Action */}
+          {entry.fields.cta && (
+            <div className="mt-12 sm:mt-16">
+              <div className="bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 rounded-xl p-6 sm:p-8 !pt-0 border border-accent-highlight/10">
+                <div className="prose prose-lg sm:prose-xl max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-a:text-accent-highlight prose-a:no-underline hover:prose-a:underline">
+                  <RichText document={entry.fields.cta} />
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </article>
       <Footer />

@@ -43,6 +43,9 @@ Create a content type with ID `journal` and these fields:
 - **readingTime** (Number, Integer) - Estimated reading time in minutes
 - **featured** (Boolean) - Mark as featured post
 - **category** (Text, Short text) - Post category
+- **cta** (Rich Text) - Call-to-action content displayed below the main content with gradient styling
+
+> **Note**: The CTA field uses the same gradient background styling (`bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10`) as the contact component cards for visual consistency.
 
 ## Field Validation
 

@@ -61,6 +61,7 @@ export interface JournalEntry {
     featured?: boolean;
     category?: string;
     coverImageUrl?: string | null;
+    cta?: any; 
   };
 }
 

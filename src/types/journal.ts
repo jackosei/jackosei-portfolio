@@ -4,7 +4,7 @@ export interface JournalFields {
   title: string;
   slug: string;
   excerpt: string;
-  coverImage: {
+  coverImage?: {
     fields: {
       file: {
         url: string;
@@ -12,6 +12,7 @@ export interface JournalFields {
       title?: string;
     };
   };
+  coverImageUrl?: string; // Alternative field for direct URL
   publishedDate: string; // ISO 8601 date string
   tags: string[];
   content: Document; // Contentful Rich Text
@@ -37,6 +38,9 @@ export interface JournalFields {
   readingTime?: number; // in minutes
   featured?: boolean;
   category?: string;
+  
+  // Call-to-Action
+  cta?: Document; // Rich Text field for call-to-action below content
 }
 
 export interface Journal {
