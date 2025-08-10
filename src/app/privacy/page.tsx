@@ -146,7 +146,7 @@ export default function PrivacyPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-foreground">1. Introduction</h2>
               <p>
-                Jack Osei ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy 
+                Jack Osei (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is committed to protecting your privacy. This Privacy Policy 
                 explains how we collect, use, disclose, and safeguard your information when you visit our website 
                 or use our services.
               </p>
@@ -293,7 +293,7 @@ export default function PrivacyPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold mb-4 text-foreground">10. Children's Privacy</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-foreground">10. Children&apos;s Privacy</h2>
               <p>
                 Our services are not intended for children under 16 years of age. We do not knowingly 
                 collect personal information from children under 16. If you believe we have collected 
@@ -305,7 +305,7 @@ export default function PrivacyPage() {
               <h2 className="text-2xl font-semibold mb-4 text-foreground">11. Changes to This Policy</h2>
               <p>
                 We may update this Privacy Policy from time to time. We will notify you of any material 
-                changes by posting the new policy on our website and updating the "Last updated" date. 
+                changes by posting the new policy on our website and updating the &ldquo;Last updated&rdquo; date. 
                 Your continued use of our services after such changes constitutes acceptance of the updated policy.
               </p>
             </section>

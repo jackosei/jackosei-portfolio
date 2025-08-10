@@ -146,7 +146,7 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4 text-foreground">1. Acceptance of Terms</h2>
               <p>
-                By accessing and using the services provided by Jack Osei ("we," "us," or "our"), 
+                By accessing and using the services provided by Jack Osei (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;), 
                 you agree to be bound by these Terms of Service. If you do not agree to these terms, 
                 please do not use our services.
               </p>
