@@ -106,7 +106,7 @@ export default function ContactPage() {
           <div className="max-w-5xl mx-auto text-center">
             <AnimateIn>
               <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-accent-highlight/10 text-accent-highlight rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
-                Let's Connect
+                Let&apos;s Connect
               </div>
             </AnimateIn>
 
@@ -309,7 +309,7 @@ export default function ContactPage() {
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   You&apos;ll get 3 specific, actionable insights to improve your
-                  website's conversion rate, plus a clear understanding of how
+                  website&apos;s conversion rate, plus a clear understanding of how
                   we can work together to achieve your goals.
                 </p>
               </AnimateIn>
