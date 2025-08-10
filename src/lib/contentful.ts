@@ -118,13 +118,35 @@ export async function getJournals(limit?: number): Promise<JournalEntry[]> {
       limit: limit || 100,
     });
     
-    return data.items.map(entry => ({
-      ...entry,
-      fields: {
-        ...entry.fields,
-        coverImageUrl: resolveAsset(entry, data.includes),
-      },
-    }));
+    // Debug logging to see the actual response structure
+    console.log('Contentful response structure:', {
+      hasItems: !!data.items,
+      itemsLength: data.items?.length,
+      responseKeys: Object.keys(data),
+      firstItem: data.items?.[0]
+    });
+    
+    // Ensure we have items and they're properly structured
+    if (!data.items || !Array.isArray(data.items)) {
+      console.error('Invalid response structure:', data);
+      return [];
+    }
+    
+    return data.items.map(entry => {
+      // Ensure the entry has the required structure
+      if (!entry || !entry.fields || !entry.sys) {
+        console.error('Invalid entry structure:', entry);
+        return null;
+      }
+      
+      return {
+        ...entry,
+        fields: {
+          ...entry.fields,
+          coverImageUrl: resolveAsset(entry, data.includes),
+        },
+      };
+    }).filter(Boolean) as JournalEntry[]; // Filter out null entries
   } catch (error) {
     console.error('Error fetching journals:', error);
     return [];

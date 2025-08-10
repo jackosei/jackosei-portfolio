@@ -15,6 +15,15 @@ export const metadata: Metadata = {
 
 export default async function JournalsPage() {
   const journals = await getJournals(24);
+  
+  // Debug logging
+  console.log('Journals page received:', {
+    journalsType: typeof journals,
+    journalsLength: journals?.length,
+    firstJournal: journals?.[0],
+    firstJournalKeys: journals?.[0] ? Object.keys(journals[0]) : []
+  });
+  
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
       <Navigation />

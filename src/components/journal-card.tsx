@@ -8,8 +8,19 @@ interface JournalCardProps {
 }
 
 export default function JournalCard({ journal }: JournalCardProps) {
+  // Safety check - ensure we have valid journal data
+  if (!journal || !journal.fields || !journal.sys) {
+    console.error('Invalid journal data received:', journal);
+    return null;
+  }
+  
   const { fields } = journal
   const dateLabel = fields.publishedDate ? format(new Date(fields.publishedDate), 'PPP') : null
+  
+  // Handle author field - it might be an object or string
+  const authorName = typeof fields.author === 'string' 
+    ? fields.author 
+    : (fields.author as any)?.fields?.name || 'Jack Osei'
   
   return (
     <Link href={`/journals/${fields.slug}`} className="card-hover group p-6 sm:p-8">
@@ -47,9 +58,9 @@ export default function JournalCard({ journal }: JournalCardProps) {
         )}
         
         <div className="mt-auto space-y-3">
-          {fields.author && (
+          {authorName && (
             <p className="text-xs sm:text-sm text-muted-foreground">
-              By {fields.author}
+              By {authorName}
             </p>
           )}
           

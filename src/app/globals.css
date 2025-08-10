@@ -126,7 +126,7 @@
   
   /* Card styles */
   .card-hover {
-    @apply bg-card border rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 hover:scale-105 hover:border-accent-highlight/20;
+    @apply bg-card border rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 hover:border-accent-highlight/20;
   }
   
   /* Section styles */
