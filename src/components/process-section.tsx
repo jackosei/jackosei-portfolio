@@ -52,9 +52,9 @@ export default function ProcessSection() {
             <AnimateIn
               key={index}
               delay={index * 0.1}
-              className="card-hover group p-6 sm:p-8"
+              className="card-hover group p-6 sm:p-8 bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 "
             >
-              <div className="text-accent-highlight mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-accent-highlight mb-4 sm:mb-6">
                 {step.icon}
               </div>
               

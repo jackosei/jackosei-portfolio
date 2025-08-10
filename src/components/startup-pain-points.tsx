@@ -185,9 +185,8 @@ export default function StartupPainPoints() {
 
         {/* Solution Section */}
         <AnimateIn delay={0.4} className="text-center">
-          <div className="bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 rounded-2xl p-8 sm:p-12 max-w-4xl mx-auto">
+          <div className="flex flex-col items-center justify-center bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 rounded-2xl p-8 sm:p-12 max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-2 mb-6">
-              <CheckCircle className="w-6 h-6 text-accent-highlight" />
               <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
                 Ready to Turn Your Website Into a Growth Engine?
               </h3>
