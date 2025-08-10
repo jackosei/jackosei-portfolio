@@ -1,0 +1,70 @@
+# Robots.txt for Jack Osei Portfolio
+# https://jackosei.com/robots.txt
+# Last updated: 2024
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas (if any exist in the future)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /_next/
+
+# Disallow API routes to prevent unnecessary crawling
+Disallow: /api/
+
+# Disallow Next.js internal routes
+Disallow: /_next/
+Disallow: /_vercel/
+
+# Allow crawling of all content pages
+Allow: /journals/
+Allow: /contact/
+Allow: /web-design-development/
+Allow: /ecommerce-development/
+Allow: /seo-optimization/
+Allow: /performance-optimization/
+Allow: /ui-ux-design/
+Allow: /api-integration/
+Allow: /analytics-insights/
+Allow: /newsletter/
+
+# Allow crawling of assets
+Allow: /images/
+Allow: /logos/
+Allow: /Favicon.ico
+Allow: /og-image.png
+
+# Sitemap locations
+Sitemap: https://jackosei.com/sitemap.xml
+Sitemap: https://jackosei.com/sitemap-index.xml
+
+# Crawl delay (helps with server load)
+Crawl-delay: 1
+
+# Additional directives for specific search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

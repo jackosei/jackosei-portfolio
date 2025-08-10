@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/toaster'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { Analytics } from "@vercel/analytics/next"
+import { defaultWebsiteStructuredData, personStructuredData } from './structured-data'
 
 const plusJakarta = Plus_Jakarta_Sans({ 
   subsets: ['latin'],
@@ -81,6 +82,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Structured Data for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(defaultWebsiteStructuredData),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personStructuredData),
+          }}
+        />
+      </head>
       <body className={`${plusJakarta.variable} font-sans`}>
         <ThemeProvider
           attribute="class"
