@@ -3,6 +3,7 @@
 import { Code, Palette, ShoppingCart, Search, Zap, Users, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimateIn from "@/components/AnimateIn";
+import Link from "next/link";
 
 const services = [
   {
@@ -108,14 +109,16 @@ export default function ServicesSection() {
               Let&apos;s work together to create something amazing that will help your business grow and succeed online.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Button 
-                variant="primary" 
-                size="lg" 
-                showArrow
-                className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4"
-              >
-                Start Your Project
-              </Button>
+              <Link href="/contact">
+                <Button 
+                  variant="primary" 
+                  size="lg" 
+                  showArrow
+                  className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4"
+                >
+                  Start Your Project
+                </Button>
+              </Link>
               <Button 
                 variant="secondary" 
                 size="lg" 

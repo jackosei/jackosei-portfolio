@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
@@ -141,22 +141,18 @@ export default function Navigation() {
                 </motion.div>
               );
             })}
-                           <Button
+            <Link href="/contact">
+              <Button
                 variant="primary"
                 size="sm"
                 className="ml-4"
                 showArrow
-                onClick={() => {
-                  const element = document.getElementById("contact");
-                  if (element) {
-                    element.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
               >
                 Contact
               </Button>
-             <ThemeSwitcher />
-           </motion.div>
+            </Link>
+            <ThemeSwitcher />
+          </motion.div>
 
           {/* Mobile Menu Button */}
           <motion.div
@@ -215,21 +211,17 @@ export default function Navigation() {
                    );
                  })}
                  <div className="pt-2">
-                                       <Button
-                      variant="primary"
-                      size="sm"
-                      className="w-full"
-                      showArrow
-                      onClick={() => {
-                        setIsOpen(false);
-                        const element = document.getElementById("contact");
-                        if (element) {
-                          element.scrollIntoView({ behavior: "smooth" });
-                        }
-                      }}
-                    >
-                      Get Started
-                    </Button>
+                   <Link href="/contact">
+                     <Button
+                       variant="primary"
+                       size="sm"
+                       className="w-full"
+                       showArrow
+                       onClick={() => setIsOpen(false)}
+                     >
+                       Get Started
+                     </Button>
+                   </Link>
                  </div>
                </div>
             </motion.div>

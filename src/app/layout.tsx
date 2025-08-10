@@ -14,10 +14,10 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Jack Osei - Founder&apos;s Tech Friend & Web Developer',
+    default: 'Jack Osei - Founder\'s Tech Friend & Web Developer',
     template: '%s | Jack Osei'
   },
-  description: 'As a founder&apos;s tech partner, I build conversion-focused websites that act as growth engines, attracting users and driving revenue for startups.',
+  description: 'As a founder\'s tech partner, I build conversion-focused websites that act as growth engines, attracting users and driving revenue for startups.',
   keywords: ['startup web developer', 'founder tech partner', 'conversion-focused websites', 'React developer', 'Next.js developer', 'Webflow developer', 'Shopify developer'],
   authors: [{ name: 'Jack Osei' }],
   creator: 'Jack Osei',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     apple: '/Favicon.ico',
   },
   openGraph: {
-    title: 'Jack Osei - Founder&apos;s Tech Friend & Web Developer',
+    title: 'Jack Osei - Founder\'s Tech Friend & Web Developer',
     description: 'I build conversion-focused websites for founders that turn visitors into customers.',
     url: 'https://jackosei.com',
     siteName: 'Jack Osei Portfolio',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Jack Osei - The Founder&apos;s Tech Friend',
+        alt: 'Jack Osei - The Founder\'s Tech Friend',
       },
     ],
     locale: 'en_US',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jack Osei - Founder&apos;s Tech Friend & Web Developer',
+    title: 'Jack Osei - Founder\'s Tech Friend & Web Developer',
     description: 'I build conversion-focused websites for founders that turn visitors into customers.',
     images: ['/og-image.png'],
   },

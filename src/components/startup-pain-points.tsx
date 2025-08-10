@@ -7,9 +7,14 @@ import {
   Target,
   TrendingDown,
   DollarSign,
+  ArrowRight,
+  Zap,
+  Users,
+  TrendingUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimateIn from "@/components/AnimateIn";
+import Link from "next/link";
 
 const painPoints = [
   {
@@ -209,15 +214,16 @@ export default function StartupPainPoints() {
               ))}
             </div>
 
-            <Button
-              onClick={scrollToContact}
-              variant="primary"
-              size="lg"
-              showArrow
-              className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4"
-            >
-              Get Your Free Website Audit
-            </Button>
+            <Link href="/contact">
+              <Button
+                variant="primary"
+                size="lg"
+                showArrow
+                className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4"
+              >
+                Get Your Free Website Audit
+              </Button>
+            </Link>
           </div>
         </AnimateIn>
       </div>
