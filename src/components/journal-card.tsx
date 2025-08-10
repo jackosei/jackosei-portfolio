@@ -23,8 +23,8 @@ export default function JournalCard({ journal }: JournalCardProps) {
     : (fields.author as any)?.fields?.name || 'Jack Osei'
   
   return (
-    <Link href={`/journals/${fields.slug}`} className="card-hover group p-6 sm:p-8">
-      <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg mb-4 sm:mb-6">
+    <Link href={`/journals/${fields.slug}`} className="card-hover group p-0">
+      <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg rounded-b-none">
         {fields.coverImageUrl ? (
           <Image
             src={fields.coverImageUrl}
@@ -39,7 +39,7 @@ export default function JournalCard({ journal }: JournalCardProps) {
         )}
       </div>
 
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col p-6 sm:p-8">
         <div className="flex items-center gap-4 mb-2 text-xs sm:text-sm text-muted-foreground">
           {dateLabel && <span>{dateLabel}</span>}
           {fields.readingTime && (

@@ -63,9 +63,10 @@ export default function SelectedWork() {
             <AnimateIn
               key={index}
               delay={index * 0.1}
-              className="card-hover group overflow-hidden flex flex-col"
+              className="card-hover group overflow-hidden flex flex-col p-0"
             >
-              <div className="relative h-48 sm:h-56 overflow-hidden">
+              {/* Media section with no padding */}
+              <div className="relative h-48 sm:h-56 overflow-hidden rounded-lg rounded-b-none">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -81,7 +82,8 @@ export default function SelectedWork() {
                 </div>
               </div>
               
-              <div className="pt-6 sm:pt-6 flex flex-col flex-1">
+              {/* Content section with padding */}
+              <div className="flex flex-col flex-1 p-6 sm:p-8">
                 <div className="flex-1">
                   <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-foreground group-hover:text-accent-highlight transition-colors">
                     {project.title}
