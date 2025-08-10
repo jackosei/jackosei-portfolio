@@ -7,32 +7,129 @@ import Footer from "@/components/footer";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "Web Development Journals & Insights | Jack Osei",
+  title: "Web Development Journals & Insights | Startup Growth & Technical Tips",
   description:
-    "Insights, notes, and lessons from building conversion-focused web experiences. Learn from real projects, technical challenges, and startup growth strategies.",
-  keywords: ['web development blog', 'startup insights', 'technical articles', 'web development tips', 'conversion optimization', 'startup growth'],
+    "Insights, notes, and lessons from building conversion-focused web experiences. Learn from real projects, technical challenges, and startup growth strategies. Expert web development content from Dubai-based developer serving Ghana and worldwide.",
+  keywords: [
+    'web development blog',
+    'startup insights',
+    'technical articles',
+    'web development tips',
+    'conversion optimization',
+    'startup growth',
+    'web development journals',
+    'technical challenges',
+    'startup strategies',
+    'conversion-focused websites',
+    'web development lessons',
+    'product development',
+    'design insights',
+    'performance optimization',
+    'indie founder',
+    'Dubai web developer',
+    'Ghana web developer'
+  ],
+  authors: [{ name: 'Jack Osei' }],
+  creator: 'Jack Osei',
+  publisher: 'Jack Osei Portfolio',
+  category: 'Technology',
   alternates: { 
     canonical: "/journals" 
   },
   openGraph: {
-    title: "Web Development Journals & Insights | Jack Osei",
-    description: "Insights, notes, and lessons from building conversion-focused web experiences. Learn from real projects, technical challenges, and startup growth strategies.",
+    title: "Web Development Journals & Insights | Startup Growth & Technical Tips",
+    description: "Insights, notes, and lessons from building conversion-focused web experiences. Learn from real projects, technical challenges, and startup growth strategies. Expert web development content from Dubai-based developer serving Ghana and worldwide.",
     url: 'https://jackosei.com/journals',
     type: 'website',
+    siteName: 'Jack Osei Portfolio',
+    locale: 'en_US',
+    images: [
+      {
+        url: 'https://jackosei.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Web Development Journals & Insights | Jack Osei',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Development Journals & Insights | Jack Osei",
-    description: "Insights, notes, and lessons from building conversion-focused web experiences. Learn from real projects, technical challenges, and startup growth strategies.",
+    title: "Web Development Journals & Insights | Startup Growth & Technical Tips",
+    description: "Insights, notes, and lessons from building conversion-focused web experiences. Learn from real projects, technical challenges, and startup growth strategies. Expert web development content from Dubai-based developer serving Ghana and worldwide.",
+    creator: '@jackosei',
+    images: ['https://jackosei.com/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
 export default async function JournalsPage() {
   const journals = await getJournals(24);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Web Development Journals & Insights",
+    "description": "Insights, notes, and lessons from building conversion-focused web experiences. Learn from real projects, technical challenges, and startup growth strategies.",
+    "url": "https://jackosei.com/journals",
+    "mainEntity": {
+      "@type": "Blog",
+      "name": "Web Development Journals",
+      "description": "Collection of web development insights, technical articles, and startup growth strategies",
+      "author": {
+        "@type": "Person",
+        "name": "Jack Osei",
+        "jobTitle": "Web Developer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dubai",
+          "addressCountry": "AE"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Jack Osei Portfolio",
+        "url": "https://jackosei.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://jackosei.com/journals"
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jackosei.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Journals",
+          "item": "https://jackosei.com/journals"
+        }
+      ]
+    }
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navigation />
       <section className="min-h-screen flex items-center pt-16 sm:pt-20 pb-20 sm:pb-24 relative overflow-hidden bg-background">
         {/* Background Elements */}

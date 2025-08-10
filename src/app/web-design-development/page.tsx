@@ -25,26 +25,74 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Web Design & Development Services | Jack Osei",
+  title: "Web Design & Development Services | Custom Startup Websites | Jack Osei",
   description:
-    "Professional web design and development services for startups. Build your digital foundation with custom, conversion-focused websites that establish credibility and drive growth. Based in Dubai, UAE and serving Ghana and worldwide.",
-  keywords:
-    "web design, web development, startup websites, custom websites, conversion-focused design, mobile-responsive, CMS, Next.js, Webflow, WordPress, Dubai web developer, Ghana web developer, African web developer",
+    "Professional web design and development services for startups. Build your digital foundation with custom, conversion-focused websites that establish credibility and drive growth. Based in Dubai, UAE and serving Ghana and worldwide clients.",
+  keywords: [
+    "web design",
+    "web development",
+    "startup websites",
+    "custom websites",
+    "conversion-focused design",
+    "mobile-responsive",
+    "CMS",
+    "Next.js",
+    "Webflow",
+    "WordPress",
+    "Dubai web developer",
+    "Ghana web developer",
+    "African web developer",
+    "startup web design",
+    "conversion optimization",
+    "custom website development",
+    "responsive web design",
+    "startup digital presence",
+    "web development services",
+    "professional web design"
+  ],
+  authors: [{ name: 'Jack Osei' }],
+  creator: 'Jack Osei',
+  publisher: 'Jack Osei Portfolio',
+  category: 'Technology',
   alternates: {
     canonical: '/web-design-development',
   },
   openGraph: {
-    title: "Web Design & Development Services | Jack Osei",
+    title: "Web Design & Development Services | Custom Startup Websites | Jack Osei",
     description:
-      "Professional web design and development services for startups. Build your digital foundation with custom, conversion-focused websites. Based in Dubai, UAE and serving Ghana and worldwide.",
+      "Professional web design and development services for startups. Build your digital foundation with custom, conversion-focused websites that establish credibility and drive growth. Based in Dubai, UAE and serving Ghana and worldwide clients.",
     url: 'https://jackosei.com/web-design-development',
     type: "website",
+    siteName: 'Jack Osei Portfolio',
+    locale: 'en_US',
+    images: [
+      {
+        url: 'https://jackosei.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Web Design & Development Services | Jack Osei',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Web Design & Development Services | Jack Osei",
-    description: "Professional web design and development services for startups. Build your digital foundation with custom, conversion-focused websites. Based in Dubai, UAE and serving Ghana and worldwide.",
+    title: "Web Design & Development Services | Custom Startup Websites | Jack Osei",
+    description: "Professional web design and development services for startups. Build your digital foundation with custom, conversion-focused websites that establish credibility and drive growth. Based in Dubai, UAE and serving Ghana and worldwide clients.",
+    creator: '@jackosei',
+    images: ['https://jackosei.com/og-image.png'],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  
 };
 
 const relatedServices = [
@@ -215,8 +263,63 @@ const solutions = [
 ];
 
 export default function WebDesignDevelopmentPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Web Design & Development Services",
+    "description": "Professional web design and development services for startups. Build your digital foundation with custom, conversion-focused websites that establish credibility and drive growth.",
+    "url": "https://jackosei.com/web-design-development",
+    "mainEntity": {
+      "@type": "Service",
+      "name": "Web Design & Development Services",
+      "description": "Custom web design and development services for startups, focusing on conversion optimization and growth",
+      "provider": {
+        "@type": "Person",
+        "name": "Jack Osei",
+        "jobTitle": "Web Developer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dubai",
+          "addressCountry": "AE"
+        }
+      },
+      "offeredBy": {
+        "@type": "Organization",
+        "name": "Jack Osei Portfolio",
+        "url": "https://jackosei.com"
+      },
+      "serviceType": "Web Design & Development",
+      "areaServed": ["Dubai", "Ghana", "Worldwide"],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://jackosei.com/web-design-development"
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jackosei.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Web Design & Development",
+          "item": "https://jackosei.com/web-design-development"
+        }
+      ]
+    }
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <header>
         <Navigation />
       </header>

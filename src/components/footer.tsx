@@ -67,7 +67,7 @@ export default function Footer() {
                 <Github className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <a
-                href="mailto:jackosei@gmail.com"
+                href="mailto:hello@jackosei.com"
                 className="p-2.5 sm:p-3 rounded-full bg-secondary hover:bg-secondary/80 transition-all duration-300 hover:scale-110 touch-manipulation"
                 aria-label="Send an email"
               >
@@ -132,7 +132,7 @@ export default function Footer() {
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-accent-highlight mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="font-medium text-foreground">Phone</p>
-                  <p>+233 55 910 9933</p>
+                  <p>+233 55 910 9933 | +971 52 654 7220</p>
                   <p className="text-xs sm:text-sm mt-1">Mon-Fri 9AM-6PM GMT</p>
                 </div>
               </div>
@@ -166,7 +166,7 @@ export default function Footer() {
                 className="w-3 h-3 sm:w-4 sm:h-4 text-red-500"
                 aria-hidden="true"
               />
-              <span>in Ghana</span>
+              <span>in Dubai, UAE</span>
             </div>
 
             <div className="flex items-center gap-4 sm:gap-6 text-xs sm:text-sm text-muted-foreground">

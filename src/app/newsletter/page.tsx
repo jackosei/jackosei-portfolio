@@ -3,28 +3,124 @@ import Navigation from '@/components/navigation'
 import Footer from '@/components/footer'
 
 export const metadata: Metadata = {
-  title: 'Newsletter - Web Development Insights | Jack Osei',
-  description: 'Stay updated with the latest web development insights, startup growth strategies, and technical tips. Join our newsletter for exclusive content and industry updates. Based in Dubai, UAE and serving Ghana and worldwide.',
-  keywords: ['web development newsletter', 'startup insights', 'technical tips', 'industry updates', 'web development trends', 'startup growth', 'Dubai web developer', 'Ghana web developer', 'African web developer'],
+  title: 'Newsletter - Web Development Insights & Startup Growth | Jack Osei',
+  description: 'Stay updated with the latest web development insights, startup growth strategies, and technical tips. Join our exclusive newsletter for industry updates, best practices, and expert advice. Based in Dubai, UAE serving Ghana and worldwide clients.',
+  keywords: [
+    'web development newsletter',
+    'startup insights',
+    'technical tips',
+    'industry updates',
+    'web development trends',
+    'startup growth',
+    'Dubai web developer',
+    'Ghana web developer',
+    'African web developer',
+    'web development insights',
+    'startup strategies',
+    'technical advice',
+    'industry trends',
+    'best practices',
+    'expert insights'
+  ],
+  authors: [{ name: 'Jack Osei' }],
+  creator: 'Jack Osei',
+  publisher: 'Jack Osei Portfolio',
+  category: 'Technology',
   alternates: {
     canonical: '/newsletter',
   },
   openGraph: {
-    title: 'Newsletter - Web Development Insights | Jack Osei',
-    description: 'Stay updated with the latest web development insights, startup growth strategies, and technical tips. Based in Dubai, UAE and serving Ghana and worldwide.',
+    title: 'Newsletter - Web Development Insights & Startup Growth | Jack Osei',
+    description: 'Stay updated with the latest web development insights, startup growth strategies, and technical tips. Join our exclusive newsletter for industry updates, best practices, and expert advice.',
     url: 'https://jackosei.com/newsletter',
     type: 'website',
+    siteName: 'Jack Osei Portfolio',
+    locale: 'en_US',
+    images: [
+      {
+        url: 'https://jackosei.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Newsletter - Web Development Insights | Jack Osei',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Newsletter - Web Development Insights | Jack Osei',
-    description: 'Stay updated with the latest web development insights, startup growth strategies, and technical tips. Based in Dubai, UAE and serving Ghana and worldwide.',
+    title: 'Newsletter - Web Development Insights & Startup Growth | Jack Osei',
+    description: 'Stay updated with the latest web development insights, startup growth strategies, and technical tips. Join our exclusive newsletter for industry updates, best practices, and expert advice.',
+    creator: '@jackosei',
+    images: ['https://jackosei.com/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
 export default function NewsletterPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Newsletter - Web Development Insights",
+    "description": "Stay updated with the latest web development insights, startup growth strategies, and technical tips. Join our exclusive newsletter for industry updates, best practices, and expert advice.",
+    "url": "https://jackosei.com/newsletter",
+    "mainEntity": {
+      "@type": "Newsletter",
+      "name": "Web Development Insights Newsletter",
+      "description": "Exclusive newsletter providing web development insights, startup growth strategies, and technical tips",
+      "author": {
+        "@type": "Person",
+        "name": "Jack Osei",
+        "jobTitle": "Web Developer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Dubai",
+          "addressCountry": "AE"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Jack Osei Portfolio",
+        "url": "https://jackosei.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://jackosei.com/newsletter"
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jackosei.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Newsletter",
+          "item": "https://jackosei.com/newsletter"
+        }
+      ]
+    }
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <Navigation />
       <section className="min-h-screen flex items-center pt-16 sm:pt-20 pb-20 sm:pb-24 relative overflow-hidden bg-background">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-secondary/10"></div>
