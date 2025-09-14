@@ -1,8 +1,8 @@
 "use client"
 
-import { Star, ExternalLink, Github } from "lucide-react";
-import Image from "next/image";
+import { Star } from "lucide-react";
 import AnimateIn from "@/components/AnimateIn";
+import SimpleWorkSlider from "@/components/simple-work-slider";
 
 const projects = [
   {
@@ -29,6 +29,51 @@ const projects = [
     image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
     category: "Restaurant",
     technologies: ["WordPress", "WooCommerce", "PHP"],
+    link: "#",
+    github: "#"
+  },
+  {
+    title: "Dubai Tech Hub",
+    description: "Corporate website for Dubai's premier tech incubator. Modern design with integrated event management and community features.",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    category: "Corporate",
+    technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+    link: "#",
+    github: "#"
+  },
+  {
+    title: "Ghana Startup Accelerator",
+    description: "Platform connecting African startups with investors. Features include pitch submissions, investor matching, and progress tracking.",
+    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    category: "SaaS",
+    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    link: "#",
+    github: "#"
+  },
+  {
+    title: "Dubai Events Pro",
+    description: "Event management platform for Dubai's hospitality industry. Streamlined booking process increased conversions by 250%.",
+    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    category: "Events",
+    technologies: ["Vue.js", "Laravel", "MySQL", "Redis"],
+    link: "#",
+    github: "#"
+  },
+  {
+    title: "African Fintech Solutions",
+    description: "Mobile-first financial platform for cross-border payments in West Africa. Secure, fast, and user-friendly design.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    category: "Fintech",
+    technologies: ["React Native", "Node.js", "PostgreSQL", "AWS"],
+    link: "#",
+    github: "#"
+  },
+  {
+    title: "Dubai Food Delivery Network",
+    description: "Multi-vendor food delivery platform connecting local restaurants with customers across Dubai. 40% increase in order volume.",
+    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    category: "Delivery",
+    technologies: ["React", "Express.js", "MongoDB", "Socket.io"],
     link: "#",
     github: "#"
   }
@@ -58,79 +103,7 @@ export default function SelectedWork() {
           </p>
         </AnimateIn>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {projects.map((project, index) => (
-            <AnimateIn
-              key={index}
-              delay={index * 0.1}
-              className="card-hover group overflow-hidden flex flex-col p-0"
-            >
-              {/* Media section with no padding */}
-              <div className="relative h-48 sm:h-56 overflow-hidden rounded-lg rounded-b-none">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <span className="inline-block px-2 py-1 bg-accent-highlight text-accent-highlight-foreground text-xs rounded-full">
-                    {project.category}
-                  </span>
-                </div>
-              </div>
-              
-              {/* Content section with padding */}
-              <div className="flex flex-col flex-1 p-6 sm:p-8">
-                <div className="flex-1">
-                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-foreground group-hover:text-accent-highlight transition-colors">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4 sm:mb-4">
-                    {project.technologies.map((tech, techIndex) => (
-                      <span
-                        key={techIndex}
-                        className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded-full"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3 mt-auto">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-accent-highlight hover:text-accent-highlight/80 transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    View Project
-                  </a>
-                  {project.github !== "#" && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <Github className="w-4 h-4" />
-                      Code
-                    </a>
-                  )}
-                </div>
-              </div>
-            </AnimateIn>
-          ))}
-        </div>
+        <SimpleWorkSlider projects={projects} />
       </div>
     </section>
   );

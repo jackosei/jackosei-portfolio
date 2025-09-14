@@ -5,22 +5,22 @@ import AnimateIn from "@/components/AnimateIn";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "CEO, TechStart",
+    name: "Lucy Afare",
+    role: "CEO, Flexy Foods",
     content: "Jack delivered an exceptional website that perfectly captured our brand vision. His attention to detail and technical expertise exceeded our expectations.",
-    companyLogo: "/logos/svoger-1.svg",
+    companyLogo: "/logos/flexy-logo.png",
   },
   {
-    name: "Michael Chen",
-    role: "Founder, DigitalFlow",
-    content: "Working with Jack was a pleasure. He understood our requirements perfectly and delivered a website that has significantly improved our online presence.",
-    companyLogo: "/logos/paterson-zochonis.svg",
+    name: "Garima Sajwan",
+    role: "VP - Product, Foodie Holdings",
+    content: "Working with Jack was a pleasure. He understood our requirements perfectly and delivered solutions that has significantly improved our online presence.",
+    companyLogo: "/logos/fhl-logo.png",
   },
   {
-    name: "Emily Rodriguez",
-    role: "Marketing Director, InnovateLab",
-    content: "Jack's creative approach and technical skills resulted in a website that not only looks great but also performs exceptionally well. Highly recommended!",
-    companyLogo: "/logos/octopus-3.svg",
+    name: "Ben Westwood",
+    role: "CEO & Founder, Pretty Little Props",
+    content: "Jack's creative approach and technical skills resulted in a website that not only looks great but also converts exceptionally well. He's now my go to guy for all my tech needs.",
+    companyLogo: "/logos/plp-logo.png",
   },
 ];
 
