@@ -51,7 +51,7 @@ export default function Testimonials() {
             <AnimateIn
               key={index}
               delay={index * 0.1}
-              className="bg-background p-6 sm:p-8 rounded-xl sm:rounded-2xl border hover:shadow-lg transition-all duration-300"
+              className="bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 p-6 sm:p-8 rounded-xl sm:rounded-2xl border hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-center justify-between mb-4 sm:mb-6">
                 <div className="w-full h-12 flex items-center justify-start">
