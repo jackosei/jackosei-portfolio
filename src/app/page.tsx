@@ -6,10 +6,12 @@ import SelectedWork from "@/components/selected-work";
 import ProcessSection from "@/components/process-section";
 import Testimonials from "@/components/testimonials";
 import AboutSection from "@/components/about-section";
+import LatestJournals from "@/components/latest-journals";
 import StartupPainPoints from "@/components/startup-pain-points";
 import ContactCTA from "@/components/contact-cta";
 import Footer from "@/components/footer";
 import GSAPInteractions from "@/components/gsap-interactions";
+import { getJournals } from "@/lib/contentful";
 
 export const metadata: Metadata = {
   title: "Jack Osei - Founder's Tech Friend & Web Developer | Dubai & Ghana",
@@ -81,7 +83,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export default async function Home() {
+  // Fetch the latest journals for the homepage
+  const journals = await getJournals(3);
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -145,6 +149,7 @@ export default function Home() {
         <SelectedWork />
         <Testimonials />
         <AboutSection />
+        <LatestJournals journals={journals} />
         <ContactCTA />
       </div>
 

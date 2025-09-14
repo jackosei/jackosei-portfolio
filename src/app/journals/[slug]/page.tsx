@@ -84,6 +84,20 @@ export default async function JournalPage({
               </p>
             )}
 
+            {/* Tags - Centered */}
+            {!!entry.fields.tags?.length && (
+              <div className="flex flex-wrap gap-2 justify-center mb-6 sm:mb-8 mt-4">
+                {entry.fields.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-3 py-1 bg-accent-highlight/10 text-accent-highlight rounded-full text-xs"
+                  >
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            )}
+
             {/* Author Info */}
             <div className="inline-flex items-center gap-6 text-sm text-muted-foreground/80">
               <span>By Jack Osei</span>
@@ -92,20 +106,6 @@ export default async function JournalPage({
               <span className="w-1 h-1 bg-accent-highlight rounded-full"></span>
               <span>{entry.fields.readingTime || '5 min read'}</span>
             </div>  
-
-            {/* Tags - Centered */}
-            {!!entry.fields.tags?.length && (
-              <div className="flex flex-wrap gap-2 justify-center mb-6 sm:mb-8">
-                {entry.fields.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-3 py-1 bg-accent-highlight/10 text-accent-highlight rounded-full text-sm"
-                  >
-                    #{tag}
-                  </span>
-                ))}
-              </div>
-            )}
           </header>
 
           {/* Featured Image */}

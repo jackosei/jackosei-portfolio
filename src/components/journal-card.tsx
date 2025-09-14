@@ -64,7 +64,7 @@ export default function JournalCard({ journal }: JournalCardProps) {
             </p>
           )}
           
-          {!!fields.tags?.length && (
+          {/* {!!fields.tags?.length && (
             <div className="flex flex-wrap gap-2">
               {fields.tags.slice(0, 3).map((tag) => (
                 <span key={tag} className="text-xs sm:text-sm px-2 py-1 rounded-full bg-accent-highlight/10 text-accent-highlight">
@@ -72,7 +72,7 @@ export default function JournalCard({ journal }: JournalCardProps) {
                 </span>
               ))}
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </Link>
