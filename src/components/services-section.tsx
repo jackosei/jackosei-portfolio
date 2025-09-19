@@ -109,7 +109,7 @@ export default function ServicesSection() {
               Let&apos;s work together to create something amazing that will help your business grow and succeed online.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Link href="/contact">
+              <Link href="#contact">
                 <Button 
                   variant="primary" 
                   size="lg" 
@@ -119,14 +119,16 @@ export default function ServicesSection() {
                   Start Your Project
                 </Button>
               </Link>
+              <Link href="#work">
               <Button 
                 variant="secondary" 
                 size="lg" 
                 showArrow
                 className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4"
               >
-                View My Work
-              </Button>
+                  View My Work
+                </Button>
+              </Link>
             </div>
           </div>
         </AnimateIn>
