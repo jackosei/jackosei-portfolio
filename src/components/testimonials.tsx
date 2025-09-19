@@ -19,7 +19,7 @@ const testimonials = [
   {
     name: "Ben Westwood",
     role: "CEO & Founder, Pretty Little Props",
-    content: "Jack's creative approach and technical skills resulted in a website that not only looks great but also converts exceptionally well. He's now my go to guy for all my tech needs.",
+    content: "Jack's creative approach and technical skills resulted in a website that not only looks great but also converts exceptionally well. He's now the go to guy for all my tech needs.",
     companyLogo: "/logos/plp-logo.png",
   },
 ];

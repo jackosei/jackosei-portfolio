@@ -70,10 +70,10 @@ export default function LatestJournals({ journals }: LatestJournalsProps) {
                 variant="primary" 
                 size="lg" 
                 showArrow
+                external
                 className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4"
               >
                 View All Journals
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
               </Button>
             </Link>
           </div>
