@@ -47,7 +47,7 @@ export default function AboutSection() {
             
             <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
               I started this practice to fix that exact problem. Everything I do is built around the founder&apos;s reality: 
-              you need to move fast, prove traction, and make every marketing dollar count. I&apos;m not just another developer—I&apos;m the technical partner who ensures your website becomes your best growth asset, not your biggest bottleneck.
+              you need to move fast, prove traction, and make every marketing dollar count. I&apos;m not just another developer, I&apos;m the technical partner who ensures your website becomes your best growth asset, not your biggest bottleneck.
             </p>
             
 

@@ -47,7 +47,7 @@ const painPoints = [
   },
   {
     problem: "Mobile users are giving up instantly",
-    description: "80% of your traffic is mobile, but your site wasn't built for thumbs. Slow loading, tiny buttons, broken layouts—you're hemorrhaging potential customers every day.",
+    description: "80% of your traffic is mobile, but your site wasn't built for thumbs. Slow loading, tiny buttons, broken layouts, you're hemorrhaging potential customers every day.",
     icon: <X className="w-5 h-5" />,
   },
 ];
@@ -57,7 +57,7 @@ const solutions = [
     icon: <Target className="w-6 h-6" />,
     title: "Built to Convert, Not Just Look Pretty",
     description:
-      "Every pixel serves a purpose. I start with your business goals and design backwards—optimizing for the metrics that actually matter to your bottom line, not just aesthetics.",
+      "Every pixel serves a purpose. I start with your business goals and design backwards, optimizing for the metrics that actually matter to your bottom line, not just aesthetics.",
   },
   {
     icon: <TrendingUp className="w-6 h-6" />,

@@ -22,7 +22,7 @@ interface ContactCTAProps {
 export default function ContactCTA({
   title = "Stop Leaving Revenue on the Table.",
   subtitle = "Start Converting.",
-  description = "Your website should be your best salesperson, working 24/7 to turn visitors into customers. Let's fix what's broken. Book a free 15-minute strategy call and I'll show you exactly what's costing you conversions—and how to fix it fast.",
+  description = "Your website should be your best salesperson, working 24/7 to turn visitors into customers. Let's fix what's broken. Book a free 15-minute strategy call and I'll show you exactly what's costing you conversions, and how to fix it fast.",
   primaryButtonText = "Book Your Free Strategy Call",
   secondaryButtonText = "Quick Contact",
   valueProps = [
@@ -34,7 +34,7 @@ export default function ContactCTA({
     {
       icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-accent-highlight" />,
       title: "15-Minute Call",
-      description: "Quick, focused, zero pressure—just actionable insights"
+      description: "Quick, focused, zero pressure, just actionable insights"
     },
     {
       icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-accent-highlight" />,

@@ -7,7 +7,7 @@ const processSteps = [
   {
     icon: <Search className="w-6 h-6 sm:w-8 sm:h-8" />,
     title: "Discovery & Strategy",
-    description: "I dig deep into your business goals, target customers, and what success looks like for you. No generic templates—everything is built around your specific growth objectives.",
+    description: "I dig deep into your business goals, target customers, and what success looks like for you. No generic templates, everything is built around your specific growth objectives.",
     duration: "1-2 days"
   },
   {
@@ -43,7 +43,7 @@ export default function ProcessSection() {
           
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             My process is designed for founders who need to move fast and see results. 
-            No endless meetings or scope creep—just a clear path from idea to revenue.
+            No endless meetings or scope creep, just a clear path from idea to revenue.
           </p>
         </AnimateIn>
 

@@ -33,7 +33,7 @@ const services = [
   {
     icon: <Zap className="w-6 h-6 sm:w-8 sm:h-8" />,
     title: "Speed That Converts",
-    description: "Slow sites lose customers. I optimize your website for lightning-fast loading times that keep users engaged and improve your search rankings—directly impacting your bottom line.",
+    description: "Slow sites lose customers. I optimize your website for lightning-fast loading times that keep users engaged and improve your search rankings, directly impacting your bottom line.",
     features: ["Sub-3 second load times", "Mobile optimization", "Core Web Vitals", "Conversion impact tracking"],
   },
   {
