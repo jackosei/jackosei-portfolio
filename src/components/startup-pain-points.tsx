@@ -18,36 +18,36 @@ import Link from "next/link";
 
 const painPoints = [
   {
-    problem: "Marketing Budget Wasted",
+    problem: "Your ads drive traffic, but nobody's buying",
     description:
-      "You're spending money on ads and content marketing, but your website isn't converting visitors into customers. It's like having a great sales pitch with no one to close the deal.",
+      "You're getting clicks and visitors, but they're bouncing faster than a bad pitch deck. Your website isn't doing the heavy lifting to convert that expensive traffic into paying customers.",
     icon: <X className="w-5 h-5" />,
   },
   {
-    problem: "Slow to Adapt",
+    problem: "Updates take forever (and cost a fortune)",
     description:
-      "Your website takes weeks to update when you need to move fast. Market feedback comes in, but you can't act on it quickly enough to stay competitive.",
+      "Want to test a new headline? That'll be 2 weeks and $500. Your developer disappeared, and now every tiny change feels like rebuilding from scratch.",
     icon: <X className="w-5 h-5" />,
   },
   {
-    problem: "Missing Opportunities",
+    problem: "You're losing to worse products with better websites",
     description:
-      "Potential customers are visiting your site but leaving without taking action. You're losing sales to competitors who have better user experiences.",
+      "Your product is superior, but their website makes them look like the obvious choice. First impressions matter, and yours isn't making the case for why you're different.",
     icon: <X className="w-5 h-5" />,
   },
   {
-    problem: "Generic design that doesn't reflect your brand",
-    description: "Your website looks like every other startup's site. It doesn't capture what makes your brand unique or communicate your value proposition clearly to potential customers.",
+    problem: "Your site screams 'template,' not 'unicorn'",
+    description: "Investors and customers can smell a generic template from miles away. Your breakthrough idea deserves a website that actually reflects your vision and potential.",
     icon: <X className="w-5 h-5" />,
   },
   {
-    problem: "No clear path for visitors to become customers",
-    description: "Visitors land on your site but don't know what to do next. There's no clear call-to-action or user journey guiding them toward becoming a customer.",
+    problem: "Visitors land and... then what?",
+    description: "People find you, but there's no clear next step. No compelling reason to stick around, sign up, or buy. Your website is a dead end instead of a conversion machine.",
     icon: <X className="w-5 h-5" />,
   },
   {
-    problem: "Mobile experience that drives users away",
-    description: "Your site looks broken or is hard to use on mobile devices. With most users browsing on phones, you're losing potential customers before they even see your value.",
+    problem: "Mobile users are giving up instantly",
+    description: "80% of your traffic is mobile, but your site wasn't built for thumbs. Slow loading, tiny buttons, broken layouts—you're hemorrhaging potential customers every day.",
     icon: <X className="w-5 h-5" />,
   },
 ];
@@ -55,31 +55,31 @@ const painPoints = [
 const solutions = [
   {
     icon: <Target className="w-6 h-6" />,
-    title: "Conversion-First Development",
+    title: "Built to Convert, Not Just Look Pretty",
     description:
-      "We start with your business goals and work backward. Every line of code, design choice, and user flow is obsessively optimized to turn a visitor into a paying customer.",
+      "Every pixel serves a purpose. I start with your business goals and design backwards—optimizing for the metrics that actually matter to your bottom line, not just aesthetics.",
   },
   {
-    icon: <TrendingDown className="w-6 h-6" />,
-    title: "Launch & Iterate in Weeks, Not Months",
+    icon: <TrendingUp className="w-6 h-6" />,
+    title: "Ship Fast, Learn Faster",
     description:
-      "Speed is your greatest asset. We'll get your high-performing site live quickly, then use real data to make it even better. No more being held hostage by slow development cycles.",
+      "Get your high-converting site live in weeks, then iterate based on real user data. No more waiting months for changes or being stuck with something that doesn't work.",
   },
   {
-    icon: <DollarSign className="w-6 h-6" />,
-    title: "A Tech Partner Who Gets It",
+    icon: <Users className="w-6 h-6" />,
+    title: "Your Technical Co-Founder (Without the Equity)",
     description:
-      "I speak founder, not just code. Think of me as the technical co-founder you can call on to translate your vision into a digital experience that investors and customers will love.",
+      "I've been where you are. I understand the urgency, the pivots, the pressure. You get someone who thinks like a founder but codes like a developer.",
   },
 ];
 
 const benefits = [
-  "Increased conversion rates",
-  "Better search engine rankings",
-  "Improved user experience",
-  "Faster page load times",
-  "Mobile-optimized design",
-  "Scalable for growth",
+  "More visitors actually become customers",
+  "Google starts sending you quality traffic",
+  "Users stick around instead of bouncing",
+  "Site loads fast (even on slow connections)",
+  "Works perfectly on every device",
+  "Built to handle your growth spurts",
 ];
 
 export default function StartupPainPoints() {
@@ -147,19 +147,15 @@ export default function StartupPainPoints() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center">
               <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-foreground">
-                The Opportunity Is Now
+                Let me help you fix this
               </h3>
               <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Your competitors are improving their websites every day. While
-                they&apos;re optimizing for conversions and user experience,
-                you&apos;re stuck with a site that doesn&apos;t reflect your
-                startup&apos;s potential. Your customers deserve better, and so
-                do you.
+                Here's the thing: while you're grinding on product-market fit and chasing your next milestone, 
+                your website is either working for you or against you. There's no neutral.
                 <br />
                 <br />
-                Every day you wait is another day of missed opportunities. But
-                the good news? You can fix this quickly and start seeing results
-                within weeks, not months.
+                The good news? This is fixable. And unlike most startup problems, 
+                you can actually solve this one in weeks, not quarters.
               </p>
             </div>
           </div>
@@ -193,14 +189,14 @@ export default function StartupPainPoints() {
           <div className="flex flex-col items-center justify-center bg-gradient-to-r from-accent-highlight/5 to-accent-highlight/10 rounded-2xl p-8 sm:p-12 max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-2 mb-6">
               <h3 className="text-2xl sm:text-3xl font-bold text-foreground">
-                Ready to Turn Your Website Into a Growth Engine?
+                Ready to Stop Leaving Money on the Table?
               </h3>
             </div>
 
             <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed">
-              When we work together, you can get back to what you do
-              best—building your business—knowing your website is finally doing
-              its job.
+              Let's turn your website into the growth engine your startup deserves. 
+              While you focus on building your product and talking to customers, 
+              I'll make sure your site is working 24/7 to convert visitors into revenue.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
