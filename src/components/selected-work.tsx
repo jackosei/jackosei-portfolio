@@ -3,13 +3,14 @@
 import { Star } from "lucide-react";
 import AnimateIn from "@/components/AnimateIn";
 import SimpleWorkSlider from "@/components/simple-work-slider";
+import { useMemo, useState } from "react";
 
 const projects = [
   {
     title: "Blast Catering",
     description: "Full-stack React/Next.js build with API integrations, UI/UX, SEO, CDN, and analytics (PostHog + GA).",
     image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    category: "Full Stack Web Development",
+    categories: ["Full Stack Web Development", "UI/UX", "SEO"],
     technologies: ["React", "Next.js", "APIs", "Node.js", "PostHog"],
     link: "https://blastcatering.com",
     github: "#"
@@ -18,7 +19,7 @@ const projects = [
     title: "Pretty Little Props",
     description: "UI/UX design and e-commerce development with analytics and SEO best practices.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    category: "E-commerce",
+    categories: ["E-commerce", "UI/UX", "Analytics"],
     technologies: ["UI/UX", "WordPress", "GA4", "E‑commerce SEO"],
     link: "https://prettylittleprops.com",
     github: "#"
@@ -27,7 +28,7 @@ const projects = [
     title: "Dish Catering",
     description: "UI + web design, on-page SEO, CDN setup, graphics, and GA integration.",
     image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    category: "Web Design",
+    categories: ["Web Design", "SEO", "Analytics"],
     technologies: ["UI Design", "Web Design", "SEO", "CDN", "GA4"],
     link: "https://dishcatering.com",
     github: "#"
@@ -36,8 +37,8 @@ const projects = [
     title: "Foodie Holdings",
     description: "Brand design, UI/UX design, and web development for a hospitality group.",
     image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    category: "Brand & Web",
-    technologies: ["Brand Design", "UI/UX", "Web Development"],
+    categories: ["Brand & Web", "UI/UX"],
+    technologies: ["Brand Design", "UI/UX", "Web Design"],
     link: "https://foodieholdings.com",
     github: "#"
   },
@@ -45,7 +46,7 @@ const projects = [
     title: "Deeritna",
     description: "Multi-country website with UI/UX, SEO, and Google Analytics setup.",
     image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    category: "Brand & Web",
+    categories: ["Brand & Web", "UI/UX", "Analytics"],
     technologies: ["UI/UX", "Multi‑region", "SEO", "GA4"],
     link: "https://deeritna.com",
     github: "#"
@@ -54,7 +55,7 @@ const projects = [
     title: "Plant Power Dubai",
     description: "Shopify theme updates and web development to enhance storefront UX.",
     image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    category: "Shopify",
+    categories: ["Shopify", "Web Design"],
     technologies: ["Shopify", "Theme Updates", "Web Development"],
     link: "plantpowerdubai.com",
     github: "#"
@@ -63,7 +64,7 @@ const projects = [
     title: "Flexy Foods",
     description: "Website UI revamp, development, GA integration, and SEO improvements.",
     image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    category: "Website Revamp",
+    categories: ["Website Revamp", "UI/UX", "SEO"],
     technologies: ["UI Revamp", "Web Development", "GA4", "SEO"],
     link: "https://flexyfoods.com",
     github: "#"
@@ -72,7 +73,7 @@ const projects = [
     title: "AYED Ghana",
     description: "Web development for a Ghana-based organization.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    category: "NGO",
+    categories: ["Web Design"],
     technologies: ["Web Development"],
     link: "https://ayedghana.com",
     github: "#"
@@ -81,7 +82,7 @@ const projects = [
     title: "TechToday Developers Limited",
     description: "UI/UX design, web development, and advanced SEO for a tech brand.",
     image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    category: "Portfolio",
+    categories: ["Web Design", "UI/UX", "SEO"],
     technologies: ["Next.js", "Tailwind CSS", "Advanced SEO"],
     link: "https://techtoday.dev",
     github: "#"
@@ -91,7 +92,7 @@ const projects = [
     title: "Photon Trading FX",
     description: "Web development for a financial trading coach with performance-focused pages and analytics.",
     image: "https://images.unsplash.com/photo-1553484771-047a44eee27f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    category: "Financial",
+    categories: ["Web Design", "Analytics"],
     technologies: ["Next.js", "Tailwind CSS", "GA4"],
     link: "https://www.photontradingfx.com/",
     github: "#"
@@ -100,7 +101,7 @@ const projects = [
     title: "Kamini Chocolate",
     description: "Landing page with modern UX for a chocolate brand. Preview available.",
     image: "https://images.unsplash.com/photo-1493925410384-84f842e616fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    category: "Landing Page",
+    categories: ["Landing Page", "UI/UX"],
     technologies: ["Next.js", "Shopify", "UI/UX"],
     link: "https://kamini-chocolate.vercel.app/",
     github: "#",
@@ -110,7 +111,7 @@ const projects = [
     title: "Paddington Home",
     description: "E-commerce website with CMS-driven pages for a home decor brand. Preview available.",
     image: "https://images.unsplash.com/photo-1505691723518-36a5ac3b2d95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    category: "E-commerce",
+    categories: ["E-commerce", "UI/UX", "Web Design"],
     technologies: ["Next.js", "CMS", "UI/UX"],
     link: "https://themerakilab.com/",
     github: "#",
@@ -119,6 +120,18 @@ const projects = [
 ];
 
 export default function SelectedWork() {
+  const [activeCategory, setActiveCategory] = useState<string>("All");
+
+  const categories = useMemo(() => {
+    const all = Array.from(new Set(projects.flatMap((p) => p.categories)));
+    return ["All", ...all];
+  }, []);
+
+  const filteredProjects = useMemo(() => {
+    if (activeCategory === "All") return projects;
+    return projects.filter((p) => p.categories.includes(activeCategory));
+  }, [activeCategory]);
+
   return (
     <section id="work" className="section-padding bg-background section-divider">
       <div className="max-w-7xl mx-auto">
@@ -142,7 +155,28 @@ export default function SelectedWork() {
           </p>
         </AnimateIn>
 
-        <SimpleWorkSlider projects={projects} />
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8 sm:mb-10">
+          {categories.map((cat) => {
+            const isActive = activeCategory === cat;
+            return (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className={`px-3 py-1.5 rounded-full text-xs sm:text-sm transition-colors border ${
+                  isActive
+                    ? "bg-accent-highlight text-accent-highlight-foreground border-accent-highlight"
+                    : "bg-secondary/50 text-foreground border-border hover:bg-secondary"
+                }`}
+                aria-pressed={isActive}
+              >
+                {cat}
+              </button>
+            );
+          })}
+        </div>
+
+        <SimpleWorkSlider projects={filteredProjects} />
       </div>
     </section>
   );

@@ -10,7 +10,7 @@ interface Project {
   title: string;
   description: string;
   image: string;
-  category: string;
+  categories: string[];
   technologies: string[];
   link: string;
   github: string;
@@ -115,19 +115,19 @@ export default function SimpleWorkSlider({ projects }: SimpleWorkSliderProps) {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <span className="inline-block px-2 py-1 bg-accent-highlight text-accent-highlight-foreground text-xs rounded-full">
-                      {project.category}
-                    </span>
-                  </div>
-                  {project.inProgress && (
-                    <div className="absolute top-3 right-3">
+                  <div className="absolute top-3 right-3 flex flex-col items-end gap-2">
+                    {project.inProgress && (
                       <span className="inline-flex items-center gap-1 px-2 py-1 bg-yellow-500 text-white text-[10px] sm:text-xs font-semibold rounded-full shadow">
                         <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
                         In Progress
                       </span>
-                    </div>
-                  )}
+                    )}
+                    {project.categories?.length > 0 && (
+                      <span className="inline-block px-2 py-1 bg-accent-highlight text-accent-highlight-foreground text-xs rounded-full">
+                        {project.categories[0]}
+                      </span>
+                    )}
+                  </div>
                 </div>
                 
                 {/* Content section */}
@@ -232,7 +232,7 @@ export default function SimpleWorkSlider({ projects }: SimpleWorkSliderProps) {
             <li key={index}>
               <h4>{project.title}</h4>
               <p>{project.description}</p>
-              <p>Category: {project.category}</p>
+              <p>Categories: {project.categories.join(', ')}</p>
               <p>Technologies: {project.technologies.join(', ')}</p>
               <a href={project.link}>View Project</a>
               {project.github !== "#" && <a href={project.github}>View Code</a>}
