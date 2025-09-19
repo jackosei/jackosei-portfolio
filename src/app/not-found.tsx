@@ -30,7 +30,7 @@ export default function NotFound() {
             <Home className="w-4 h-4 ml-2 group-hover:scale-110 transition-transform" />
           </Link>
           <Link 
-            href="/#contact" 
+            href="/contact" 
             className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-foreground hover:text-accent-highlight transition-all duration-300 group h-12 px-5"
           >
             Get in Touch
