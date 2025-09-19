@@ -37,17 +37,17 @@ const painPoints = [
   },
   {
     problem: "Generic design that doesn't reflect your brand",
-    solution: "Custom design that captures your unique value proposition",
+    description: "Your website looks like every other startup's site. It doesn't capture what makes your brand unique or communicate your value proposition clearly to potential customers.",
     icon: <X className="w-5 h-5" />,
   },
   {
     problem: "No clear path for visitors to become customers",
-    solution: "Strategic user journey designed to maximize conversions",
+    description: "Visitors land on your site but don't know what to do next. There's no clear call-to-action or user journey guiding them toward becoming a customer.",
     icon: <X className="w-5 h-5" />,
   },
   {
     problem: "Mobile experience that drives users away",
-    solution: "Mobile-first design that converts on all devices",
+    description: "Your site looks broken or is hard to use on mobile devices. With most users browsing on phones, you're losing potential customers before they even see your value.",
     icon: <X className="w-5 h-5" />,
   },
 ];
@@ -133,7 +133,7 @@ export default function StartupPainPoints() {
                     {point.problem}
                   </h3>
                   <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                    {point.description || point.solution}
+                    {point.description}
                   </p>
                 </div>
               </div>
