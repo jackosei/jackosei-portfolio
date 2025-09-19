@@ -14,6 +14,7 @@ interface Project {
   technologies: string[];
   link: string;
   github: string;
+  inProgress?: boolean;
 }
 
 interface SimpleWorkSliderProps {
@@ -119,6 +120,14 @@ export default function SimpleWorkSlider({ projects }: SimpleWorkSliderProps) {
                       {project.category}
                     </span>
                   </div>
+                  {project.inProgress && (
+                    <div className="absolute top-3 right-3">
+                      <span className="inline-flex items-center gap-1 px-2 py-1 bg-yellow-500 text-white text-[10px] sm:text-xs font-semibold rounded-full shadow">
+                        <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
+                        In Progress
+                      </span>
+                    </div>
+                  )}
                 </div>
                 
                 {/* Content section */}
