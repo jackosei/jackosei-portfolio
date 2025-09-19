@@ -9,7 +9,7 @@ const projects = [
   {
     title: "Blast Catering",
     description: "Full-stack React/Next.js build with API integrations, UI/UX, SEO, CDN, and analytics (PostHog + GA).",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/workshots/blast-catering.png",
     categories: ["Full Stack Web Development", "UI/UX", "SEO"],
     technologies: ["React", "Next.js", "APIs", "Node.js", "PostHog"],
     link: "https://blastcatering.com",
@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Pretty Little Props",
     description: "UI/UX design and e-commerce development with analytics and SEO best practices.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/workshots/pretty-little-props.png",
     categories: ["E-commerce", "UI/UX", "Analytics"],
     technologies: ["UI/UX", "WordPress", "GA4", "E‑commerce SEO"],
     link: "https://prettylittleprops.com",
@@ -27,16 +27,16 @@ const projects = [
   {
     title: "Dish Catering",
     description: "UI + web design, on-page SEO, CDN setup, graphics, and GA integration.",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/workshots/dish-catering.png",
     categories: ["Web Design", "SEO", "Analytics"],
     technologies: ["UI Design", "Web Design", "SEO", "CDN", "GA4"],
-    link: "https://dishcatering.com",
+    link: "https://dish.ae",
     github: "#"
   },
   {
     title: "Foodie Holdings",
     description: "Brand design, UI/UX design, and web development for a hospitality group.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/workshots/foodie-holdings.png",
     categories: ["Brand & Web", "UI/UX"],
     technologies: ["Brand Design", "UI/UX", "Web Design"],
     link: "https://foodieholdings.com",
@@ -45,16 +45,16 @@ const projects = [
   {
     title: "Deeritna",
     description: "Multi-country website with UI/UX, SEO, and Google Analytics setup.",
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/workshots/deeritna.png",
     categories: ["Brand & Web", "UI/UX", "Analytics"],
     technologies: ["UI/UX", "Multi‑region", "SEO", "GA4"],
-    link: "https://deeritna.com",
+    link: "https://deeritna.com/uae/",
     github: "#"
   },
   {
     title: "Plant Power Dubai",
     description: "Shopify theme updates and web development to enhance storefront UX.",
-    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/workshots/plant-power-dubai.png",
     categories: ["Shopify", "Web Design"],
     technologies: ["Shopify", "Theme Updates", "Web Development"],
     link: "plantpowerdubai.com",
@@ -63,16 +63,16 @@ const projects = [
   {
     title: "Flexy Foods",
     description: "Website UI revamp, development, GA integration, and SEO improvements.",
-    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/workshots/flexy-foods.png",
     categories: ["Website Revamp", "UI/UX", "SEO"],
     technologies: ["UI Revamp", "Web Development", "GA4", "SEO"],
-    link: "https://flexyfoods.com",
+    link: "https://flexyfoodsgh.com",
     github: "#"
   },
   {
     title: "AYED Ghana",
     description: "Web development for a Ghana-based organization.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/workshots/ayed-ghana.png",
     categories: ["Web Design"],
     technologies: ["Web Development"],
     link: "https://ayedghana.com",
@@ -81,7 +81,7 @@ const projects = [
   {
     title: "TechToday Developers Limited",
     description: "UI/UX design, web development, and advanced SEO for a tech brand.",
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/workshots/techtoday-developers-limited.png",
     categories: ["Web Design", "UI/UX", "SEO"],
     technologies: ["Next.js", "Tailwind CSS", "Advanced SEO"],
     link: "https://techtoday.dev",
@@ -91,7 +91,7 @@ const projects = [
   {
     title: "Photon Trading FX",
     description: "Web development for a financial trading coach with performance-focused pages and analytics.",
-    image: "https://images.unsplash.com/photo-1553484771-047a44eee27f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/workshots/photon-trading-fx.png",
     categories: ["Web Design", "Analytics"],
     technologies: ["Next.js", "Tailwind CSS", "GA4"],
     link: "https://www.photontradingfx.com/",
@@ -100,7 +100,7 @@ const projects = [
   {
     title: "Kamini Chocolate",
     description: "Landing page with modern UX for a chocolate brand. Preview available.",
-    image: "https://images.unsplash.com/photo-1493925410384-84f842e616fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/workshots/kamini-chocolate.png",
     categories: ["Landing Page", "UI/UX"],
     technologies: ["Next.js", "Shopify", "UI/UX"],
     link: "https://kamini-chocolate.vercel.app/",
@@ -110,7 +110,7 @@ const projects = [
   {
     title: "Paddington Home",
     description: "E-commerce website with CMS-driven pages for a home decor brand. Preview available.",
-    image: "https://images.unsplash.com/photo-1505691723518-36a5ac3b2d95?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+    image: "/workshots/paddington-home.png",
     categories: ["E-commerce", "UI/UX", "Web Design"],
     technologies: ["Next.js", "CMS", "UI/UX"],
     link: "https://themerakilab.com/",

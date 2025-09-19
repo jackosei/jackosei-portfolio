@@ -1,0 +1,16 @@
+[
+  { "name": "Blast Catering", "url": "https://blastcatering.com", "selector": "header, .hero, section[id^=home]" },
+  { "name": "Pretty Little Props", "url": "https://prettylittleprops.com", "selector": "header, .hero, section[id^=home]" },
+  { "name": "Dish Catering", "url": "https://dish.ae", "selector": "header, .hero, section[id^=home]" },
+  { "name": "Foodie Holdings", "url": "https://foodieholdings.com", "selector": "header, .hero, section[id^=home]" },
+  { "name": "Deeritna", "url": "https://deeritna.com/uae", "selector": "header, .hero, section[id^=home]" },
+  { "name": "Plant Power Dubai", "url": "https://plantpowerdubai.com", "selector": "header, .hero, section[id^=home]" },
+  { "name": "Flexy Foods", "url": "https://flexyfoodsgh.com", "selector": "header, .hero, section[id^=home]" },
+  { "name": "AYED Ghana", "url": "https://ayedghana.com", "selector": "header, .hero, section[id^=home]" },
+  { "name": "TechToday Developers Limited", "url": "https://techtoday.dev", "selector": "header, .hero, section[id^=home]" },
+  { "name": "Photon Trading FX", "url": "https://www.photontradingfx.com/", "selector": "header, .hero, section[id^=home]" },
+  { "name": "Kamini Chocolate", "url": "https://kamini-chocolate.vercel.app/", "selector": "header, .hero, section[id^=home]" },
+  { "name": "Paddington Home", "url": "https://themerakilab.com/", "selector": "header, .hero, section[id^=home]" }
+]
+
+

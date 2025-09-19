@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "shots:install": "npx --yes playwright@latest install --with-deps chromium | cat",
+    "shots:run": "node scripts/capture-workshots.mjs"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^16.1.0",
@@ -75,6 +77,7 @@
     "eslint-config-next": "^15.4.6",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.17",
-    "typescript": "5.6.3"
+    "typescript": "5.6.3",
+    "playwright": "^1.48.2"
   }
 }

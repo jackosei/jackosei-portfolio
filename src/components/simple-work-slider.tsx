@@ -23,12 +23,9 @@ interface SimpleWorkSliderProps {
 
 export default function SimpleWorkSlider({ projects }: SimpleWorkSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isClient, setIsClient] = useState(false);
   const [itemsToShow, setItemsToShow] = useState(3);
 
   useEffect(() => {
-    setIsClient(true);
-    
     const updateItemsToShow = () => {
       if (window.innerWidth < 640) {
         setItemsToShow(1);
@@ -47,43 +44,16 @@ export default function SimpleWorkSlider({ projects }: SimpleWorkSliderProps) {
   const maxIndex = Math.max(0, projects.length - itemsToShow);
 
   const nextSlide = () => {
-    if (!isClient) return;
     setCurrentIndex(prev => prev < maxIndex ? prev + 1 : 0);
   };
 
   const prevSlide = () => {
-    if (!isClient) return;
     setCurrentIndex(prev => prev > 0 ? prev - 1 : maxIndex);
   };
 
   const goToSlide = (index: number) => {
-    if (!isClient) return;
     setCurrentIndex(Math.max(0, Math.min(index, maxIndex)));
   };
-
-  // Show loading state during hydration
-  if (!isClient) {
-    return (
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-        {projects.slice(0, 3).map((project, index) => (
-          <div key={index} className="card-hover group overflow-hidden flex flex-col p-0 h-full">
-            <div className="relative h-48 sm:h-56 overflow-hidden rounded-lg rounded-b-none">
-              <div className="w-full h-full bg-muted animate-pulse" />
-            </div>
-            <div className="flex flex-col flex-1 p-6 sm:p-8">
-              <div className="h-6 bg-muted rounded animate-pulse mb-4" />
-              <div className="h-4 bg-muted rounded animate-pulse mb-2" />
-              <div className="h-4 bg-muted rounded animate-pulse mb-4" />
-              <div className="flex gap-2 mb-4">
-                <div className="h-6 w-16 bg-muted rounded animate-pulse" />
-                <div className="h-6 w-20 bg-muted rounded animate-pulse" />
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    );
-  }
 
   return (
     <div className="relative">
@@ -107,13 +77,26 @@ export default function SimpleWorkSlider({ projects }: SimpleWorkSliderProps) {
               >
                 {/* Media section */}
                 <div className="relative h-48 sm:h-56 overflow-hidden rounded-lg rounded-b-none">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
+                  {project.image ? (
+                    <>
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        onError={(e) => {
+                          const target = e.currentTarget as HTMLImageElement;
+                          target.style.display = 'none';
+                          const fallback = target.parentElement?.querySelector('.fallback-gradient') as HTMLElement | null;
+                          if (fallback) fallback.style.display = 'block';
+                        }}
+                      />
+                      <div className="fallback-gradient hidden absolute inset-0 bg-gradient-to-br from-accent-highlight/30 via-accent-highlight/10 to-primary/20" />
+                    </>
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent-highlight/30 via-accent-highlight/10 to-primary/20" />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   <div className="absolute top-3 right-3 flex flex-col items-end gap-2">
                     {project.inProgress && (
