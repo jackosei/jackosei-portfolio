@@ -20,26 +20,26 @@ interface ContactCTAProps {
 }
 
 export default function ContactCTA({
-  title = "Stop Guessing.",
-  subtitle = "Start Growing.",
-  description = "Your website has untapped potential. Let's find it. Book a free, no-pressure 15-minute strategy call. I'll give you at least three actionable insights you can use to improve your conversion rate immediately—whether we work together or not.",
+  title = "Stop Leaving Revenue on the Table.",
+  subtitle = "Start Converting.",
+  description = "Your website should be your best salesperson, working 24/7 to turn visitors into customers. Let's fix what's broken. Book a free 15-minute strategy call and I'll show you exactly what's costing you conversions—and how to fix it fast.",
   primaryButtonText = "Book Your Free Strategy Call",
   secondaryButtonText = "Quick Contact",
   valueProps = [
     {
       icon: <Target className="w-5 h-5 sm:w-6 sm:h-6 text-accent-highlight" />,
-      title: "3 Specific Insights",
-      description: "Get actionable advice to improve your conversion rate"
+      title: "Conversion Audit",
+      description: "I'll spot exactly what's killing your conversion rate"
     },
     {
       icon: <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-accent-highlight" />,
       title: "15-Minute Call",
-      description: "Quick, focused, no pressure - just value"
+      description: "Quick, focused, zero pressure—just actionable insights"
     },
     {
       icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-accent-highlight" />,
-      title: "Immediate Value",
-      description: "Walk away with specific next steps"
+      title: "Immediate Impact",
+      description: "Leave with 3 specific changes you can implement today"
     }
   ]
 }: ContactCTAProps) {

@@ -9,38 +9,38 @@ const services = [
   {
     icon: <Code className="w-6 h-6 sm:w-8 sm:h-8" />,
     title: "The MVP Launchpad",
-    description: "Let's get your idea into the market, fast. I build lean, scalable, and conversion-focused MVPs using React, Next.js, and Node.js that are designed to attract your first users and validate your concept.",
-    features: ["MVP Development", "React & Next.js", "API Integration", "Scalable Architecture"],
+    description: "Get your idea in front of real users in weeks, not months. I build lean, conversion-focused MVPs that help you validate demand and attract early customers, without the bloat or endless feature creep.",
+    features: ["Ship in 2-4 weeks", "Built for user feedback", "Conversion tracking ready", "Scale-ready architecture"],
   },
   {
     icon: <Palette className="w-6 h-6 sm:w-8 sm:h-8" />,
     title: "The Conversion Engine",
-    description: "Need a powerful marketing site that your team can actually use? I design beautiful, high-performing websites on Webflow and WordPress that are easy to manage and optimized for SEO and lead generation.",
-    features: ["Custom Development", "Mobile-First Design", "CMS Integration", "Conversion Optimization"],
+    description: "Turn your marketing spend into actual customers. I build websites that are optimized to convert visitors into leads, trials, and sales from day one.",
+    features: ["Lead generation focus", "A/B test ready", "SEO optimized", "Easy content updates"],
   },
   {
     icon: <ShoppingCart className="w-6 h-6 sm:w-8 sm:h-8" />,
     title: "The E-commerce Accelerator",
-    description: "Ready to sell? I create Shopify & WooCommerce experiences that are engineered to maximize sales, from custom themes and payment integrations to fine-tuned conversion funnels.",
-    features: ["Product Catalog", "Custom Themes", "Payment Integration", "Conversion Funnels"],
+    description: "Ready to start selling? I create e-commerce experiences designed to maximize revenue per visitor. Every element is optimized to reduce cart abandonment and increase average order value.",
+    features: ["Conversion-optimized checkout", "Mobile-first design", "Payment flexibility", "Revenue analytics"],
   },
   {
     icon: <Search className="w-6 h-6 sm:w-8 sm:h-8" />,
-    title: "Startup SEO & Growth",
-    description: "SEO strategies that get your startup discovered by the right audience. Data-driven content and technical optimization for sustainable growth.",
-    features: ["Startup SEO", "Content Strategy", "Growth Analytics", "Competitive Analysis"],
+    title: "Get Found by Your Customers",
+    description: "Stop relying on paid ads alone. I implement SEO strategies that bring qualified prospects to your site organically, the kind of traffic that converts and compounds over time.",
+    features: ["Organic traffic growth", "Competitor analysis", "Content strategy", "Local SEO (if needed)"],
   },
   {
     icon: <Zap className="w-6 h-6 sm:w-8 sm:h-8" />,
-    title: "Performance & Speed",
-    description: "Lightning-fast websites that convert better and rank higher. Core Web Vitals optimization for better user experience and search rankings.",
-    features: ["Core Web Vitals", "Speed Optimization", "Mobile Performance", "Conversion Impact"],
+    title: "Speed That Converts",
+    description: "Slow sites lose customers. I optimize your website for lightning-fast loading times that keep users engaged and improve your search rankings—directly impacting your bottom line.",
+    features: ["Sub-3 second load times", "Mobile optimization", "Core Web Vitals", "Conversion impact tracking"],
   },
   {
     icon: <Users className="w-6 h-6 sm:w-8 sm:h-8" />,
     title: "User Experience Strategy",
-    description: "UX design that reduces friction and increases conversions. User research, prototyping, and testing focused on business outcomes.",
-    features: ["User Research", "Conversion UX", "Usability Testing", "Growth Metrics"],
+    description: "Remove the friction between visitors and revenue. I design user journeys that guide prospects naturally toward becoming customers, based on data, not assumptions.",
+    features: ["Conversion-focused design", "User behavior analysis", "A/B testing setup", "Revenue impact measurement"],
   },
 ];
 
@@ -63,8 +63,8 @@ export default function ServicesSection() {
           </h2>
           
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Whether you&apos;re launching your first product or scaling to your next milestone, 
-            I provide the technical firepower you need to win.
+            Whether you&apos;re validating your MVP or scaling to Series A, 
+            I build the digital foundation that turns your vision into revenue.
           </p>
         </AnimateIn>
 
@@ -106,7 +106,8 @@ export default function ServicesSection() {
               Ready to Start Your Project?
             </h3>
             <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
-              Let&apos;s work together to create something amazing that will help your business grow and succeed online.
+              Let&apos;s build something that works as hard as you do to grow your business. 
+              No fluff, no endless revisions, just results you can measure.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link href="#contact">

@@ -7,20 +7,20 @@ const processSteps = [
   {
     icon: <Search className="w-6 h-6 sm:w-8 sm:h-8" />,
     title: "Discovery & Strategy",
-    description: "We start by understanding your business goals, target audience, and conversion objectives. This isn't just about what looks good—it's about what converts.",
+    description: "I dig deep into your business goals, target customers, and what success looks like for you. No generic templates—everything is built around your specific growth objectives.",
     duration: "1-2 days"
   },
   {
     icon: <Code className="w-6 h-6 sm:w-8 sm:h-8" />,
-    title: "Design & Development",
-    description: "Rapid prototyping and development using modern technologies. I focus on speed without sacrificing quality or conversion optimization.",
+    title: "Build & Test",
+    description: "Fast, iterative development with regular check-ins. You see progress weekly, not monthly. Every feature is tested for conversion impact before it goes live.",
     duration: "1-4 weeks"
   },
   {
     icon: <Zap className="w-6 h-6 sm:w-8 sm:h-8" />,
-    title: "Launch & Optimize",
-    description: "Quick deployment followed by performance monitoring and conversion optimization. Your website starts working for you immediately.",
-    duration: "Ongoing"
+    title: "Launch & Scale",
+    description: "Go live fast, then optimize based on real user data. I monitor performance and make improvements that directly impact your metrics and revenue.",
+    duration: "Ongoing support"
   }
 ];
 
@@ -42,8 +42,8 @@ export default function ProcessSection() {
           </h2>
           
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            A proven process that gets your website live quickly and generating revenue fast. 
-            No endless revisions or technical delays—just results.
+            My process is designed for founders who need to move fast and see results. 
+            No endless meetings or scope creep—just a clear path from idea to revenue.
           </p>
         </AnimateIn>
 

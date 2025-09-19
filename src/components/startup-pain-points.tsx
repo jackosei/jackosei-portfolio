@@ -150,8 +150,8 @@ export default function StartupPainPoints() {
                 Let me help you fix this
               </h3>
               <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Here's the thing: while you're grinding on product-market fit and chasing your next milestone, 
-                your website is either working for you or against you. There's no neutral.
+                Here&apos;s the thing: while you&apos;re grinding on product-market fit and chasing your next milestone, 
+                your website is either working for you or against you. There&apos;s no neutral.
                 <br />
                 <br />
                 The good news? This is fixable. And unlike most startup problems, 
@@ -194,9 +194,9 @@ export default function StartupPainPoints() {
             </div>
 
             <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed">
-              Let's turn your website into the growth engine your startup deserves. 
+              Let&apos;s turn your website into the growth engine your startup deserves. 
               While you focus on building your product and talking to customers, 
-              I'll make sure your site is working 24/7 to convert visitors into revenue.
+              I&apos;ll make sure your site is working 24/7 to convert visitors into revenue.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-4 mb-8">

@@ -41,14 +41,13 @@ export default function AboutSection() {
             </h2>
             
             <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
-              I&apos;ve spent years watching brilliant founders get stuck with websites that failed them. 
-              They had incredible ideas but were held back by slow, expensive, and ineffective digital platforms.
+              I&apos;ve watched too many brilliant founders get stuck with websites that cost them customers. 
+              Incredible ideas held back by slow developers, expensive agencies, and sites that looked good but converted poorly.
             </p>
             
             <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
-              I started this practice to fix that. My entire process is built around the founder&apos;s reality: 
-              you need to move fast, show traction, and make every dollar count. I&apos;m not just a freelancer you hire for a task; 
-              I&apos;m your strategic partner, your technical advisor, and the person who ensures your online presence is a competitive advantage, not a liability.
+              I started this practice to fix that exact problem. Everything I do is built around the founder&apos;s reality: 
+              you need to move fast, prove traction, and make every marketing dollar count. I&apos;m not just another developer—I&apos;m the technical partner who ensures your website becomes your best growth asset, not your biggest bottleneck.
             </p>
             
 

@@ -41,8 +41,8 @@ export default function Testimonials() {
           </h2>
           
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Don&apos;t just take my word for it. Here&apos;s what startup founders have to say 
-            about the business impact of working together.
+            Don&apos;t just take my word for it. Here&apos;s what founders say 
+            about the real business impact we achieved together.
           </p>
         </AnimateIn>
 
