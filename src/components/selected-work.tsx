@@ -117,7 +117,12 @@ const projects = [
     github: "#",
     inProgress: true
   }
-];
+].sort((a, b) => {
+  // Show in-progress items first, then others
+  if (a.inProgress && !b.inProgress) return -1;
+  if (!a.inProgress && b.inProgress) return 1;
+  return 0; // maintain original order within each group
+});
 
 export default function SelectedWork() {
   const [activeCategory, setActiveCategory] = useState<string>("All");

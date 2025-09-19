@@ -15,7 +15,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Jack Osei - Founder\'s Tech Friend & Web Developer',
+    default: 'Jack Osei - The Founder\'s Tech Friend & Web Developer',
     template: '%s | Jack Osei'
   },
   description: 'As a founder\'s tech partner, I build conversion-focused websites that act as growth engines, attracting users and driving revenue for startups. Based in Dubai, UAE and serving Ghana and worldwide.',

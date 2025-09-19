@@ -70,7 +70,6 @@ export default function HeroSection() {
               variant="secondary"
               size="lg"
               showArrow
-              external
               className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4"
             >
               See My Work
