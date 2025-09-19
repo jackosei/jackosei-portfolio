@@ -98,7 +98,7 @@ export default function SimpleWorkSlider({ projects }: SimpleWorkSliderProps) {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex-shrink-0 px-3"
+              className="flex-shrink-0 pr-6"
               style={{ width: `${100 / itemsToShow}%` }}
             >
               <AnimateIn
